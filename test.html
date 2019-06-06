@@ -1,0 +1,438 @@
+
+<!DOCTYPE html>
+<html>
+<title>W3.CSS Template</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Amatic+SC">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+ 
+<style>
+body, html {height: 100%}
+body,h1,h2,h3,h4,h5,h6 {font-family: "Amatic SC", sans-serif}
+.menu {display: none}
+.bgimg {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("pizza1.jpg");
+  min-height: 90%;
+}
+.topnav-right {
+  float: right;
+}
+.dropbtn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  right: 0;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+$grey: #F5F5F5;
+$dark-grey: #323B40;
+
+$light-blue: #E0F5FF;
+$blue: #B9E5FE;
+$dark-blue: #00A5FA;
+
+$green: #B7E0DC;
+$dark-green: #019888;
+
+$lime: #C7E8C8;
+$dark-lime: #42B045;
+
+$yellow: #FFEEBA;
+$dark-yellow: #FF9901;
+  
+$pink: #FABAD0;
+$dark-pink: #EF075F;
+ 
+
+
+@mixin color-div($color1, $color2){
+    background-color: $color1;
+    color: $color2;
+}
+
+.container {
+  padding: 2rem 0rem;
+}
+
+h4 {
+  margin: 2rem 0rem;
+}
+
+.panel {
+  border-radius: 4px;
+  padding: 1rem;
+  margin-top: 0.2rem;
+  
+  @include color-div($grey, $dark-grey);
+  
+  &.panel-blue {
+    @include color-div($light-blue, $dark-blue);
+  }
+  
+  &.panel-big-height{
+    min-height: 150px;
+  }
+}
+
+.item {
+  border-radius: 4px;
+  padding: 0.5rem;
+  margin: 0.2rem;
+  
+  &.item-blue {
+    @include color-div($blue, $dark-blue);
+  }
+  
+  &.item-green {
+    @include color-div($green, $dark-green);
+  }
+  
+  &.item-lime {
+    @include color-div($lime, $dark-lime);
+  }
+  
+  &.item-yellow {
+    @include color-div($yellow, $dark-yellow);
+  }
+  
+  &.item-pink {
+    @include color-div($pink, $dark-pink);
+  }
+  
+  &.item-red {
+    @include color-div($red, $dark-red);
+  }
+  
+  &.item-big-width{
+    min-width: 380px;
+  }
+}
+
+</style>
+<body>
+
+<!-- Navbar (sit on top) -->
+<div class="w3-top w3-hide-small">
+  <div class="w3-bar w3-xlarge w3-black w3-opacity w3-hover-opacity-off" id="myNavbar">
+    <a href="pizza_main.html" class="w3-bar-item w3-button">HOME</a>
+    <a href="pizza_about.html#menu" class="w3-bar-item w3-button">MENU</a>
+    <a href="pizza_main.html#about" class="w3-bar-item w3-button">ABOUT</a>
+    <a href="pizza_main.html#googleMap" class="w3-bar-item w3-button">CONTACT</a>
+    <div class="dropdown" style="float:right;">
+    <a href="#viewHours" class="w3-bar-item w3-button">View Hours</a>
+    <div class="dropdown-content">
+    <span class="dropdown-item-text">Just Text</span>
+  </div>
+</div>
+  </div>
+</div>
+  
+<!-- Header with image -->
+<header class="bgimg w3-display-container w3-grayscale-min" id="home">
+ 
+  <div class="w3-display-middle w3-center">
+    <span class="w3-text-white w3-hide-small" style="font-size:100px">Algieri's<br>PIZZA</span>
+    <span class="w3-text-white w3-hide-large w3-hide-medium" style="font-size:60px"><b>Algieri's<br>PIZZA</b></span>
+    <p><a href="#menu" class="w3-button w3-xxlarge w3-black">Order Online</a></p>
+  </div>
+</header>
+
+<!-- Menu Container -->
+<div class="w3-container w3-black w3-padding-64 w3-xxlarge" id="menu">
+  <div class="w3-content">
+  
+    <h1 class="w3-center w3-jumbo" style="margin-bottom:64px">THE MENU</h1>
+    <div class="w3-row w3-center w3-border w3-border-dark-grey">
+      <a href="javascript:void(0)" onclick="openMenu(event, 'Pizza');" id="myLink">
+        <div class="w3-col s4 tablink w3-padding-large w3-hover-red">Pizza</div>
+      </a>
+      <a href="javascript:void(0)" onclick="openMenu(event, 'Speciality Pizza');">
+        <div class="w3-col s4 tablink w3-padding-large w3-hover-red">Speciality Pizza</div>
+      </a>
+      <a href="javascript:void(0)" onclick="openMenu(event, 'Pasta');">
+        <div class="w3-col s4 tablink w3-padding-large w3-hover-red">Pasta</div>
+      </a>
+      <a href="javascript:void(0)" onclick="openMenu(event, 'Appetizer');">
+        <div class="w3-col s4 tablink w3-padding-large w3-hover-red">Appetizers</div>
+      </a>
+      <a href="javascript:void(0)" onclick="openMenu(event, 'Subs');">
+        <div class="w3-col s4 tablink w3-padding-large w3-hover-red">Subs</div>
+      </a>
+      <a href="javascript:void(0)" onclick="openMenu(event, 'Salad');">
+        <div class="w3-col s4 tablink w3-padding-large w3-hover-red">Salad</div>
+      </a>
+    </div>
+
+    <div id="Pizza" class="w3-container menu w3-padding-32 w3-white">
+     <b><button onclick="document.getElementById('contact').style.display='block'" class="w3-button w3-white">Plain</button></b> 
+<span class="w3-right w3-tag w3-dark-grey w3-round">$11.25</span></a></h1>
+      <p class="w3-text-grey">Cheese Pizza</p>
+      <hr>
+   
+      <h1><b>Pepperoni</b> <span class="w3-right w3-tag w3-dark-grey w3-round">$12.95</span></h1>
+      <p class="w3-text-grey">Cheese Pizza with Pepperoni topping</p>
+      <hr>
+      
+      <h1><b>Meatball</b> <span class="w3-right w3-tag w3-dark-grey w3-round">$12.95</span></h1>
+      <p class="w3-text-grey">Cheese Pizza with Meatball topping</p>
+      <hr>
+
+      <h1><b>Anchovies</b> <span class="w3-right w3-tag w3-dark-grey w3-round">$12.95</span></h1>
+      <p class="w3-text-grey">Cheese pizza with Anchovies</p>
+      <hr>
+
+      <h1><b>Ham</b> <span class="w3-tag w3-red w3-round">Hot!</span><span class="w3-right w3-tag w3-dark-grey w3-round">$12.95</span></h1>
+      <p class="w3-text-grey">Cheese Pizza with Ham</p>
+      <hr>
+    </div>
+
+    <div id="Speciality Pizza" class="w3-container menu w3-padding-32 w3-white">
+      <h1><b>Margherita</b> <span class="w3-right w3-tag w3-dark-grey w3-round">$12.50</span></h1>
+      <p class="w3-text-grey">Fresh tomatoes, fresh mozzarella, fresh basil</p>
+      <hr>
+   
+      <h1><b>Meat Lovers</b> <span class="w3-right w3-tag w3-dark-grey w3-round">$15.50</span></h1>
+      <p class="w3-text-grey">Four cheeses (mozzarella, parmesan, pecorino, jarlsberg)</p>
+      <hr>
+      
+      <h1><b>Chicken</b> <span class="w3-right w3-tag w3-dark-grey w3-round">$17.00</span></h1>
+      <p class="w3-text-grey">Fresh tomatoes, mozzarella, chicken(grilled or fried), onions</p>
+      <hr>
+
+      <h1><b>Pineapple'o'clock</b> <span class="w3-right w3-tag w3-dark-grey w3-round">$16.50</span></h1>
+      <p class="w3-text-grey">Fresh tomatoes, mozzarella, fresh pineapple, bacon, fresh basil</p>
+      <hr>
+
+      <h1><b>Meat Town</b> <span class="w3-tag w3-red w3-round">Hot!</span><span class="w3-right w3-tag w3-dark-grey w3-round">$20.00</span></h1>
+      <p class="w3-text-grey">Fresh tomatoes, mozzarella, hot pepporoni, hot sausage, beef, chicken</p>
+      <hr>
+
+      <h1><b>Parma</b> <span class="w3-tag w3-grey w3-round">New</span><span class="w3-right w3-tag w3-dark-grey w3-round">$21.50</span></h1>
+      <p class="w3-text-grey">Fresh tomatoes, mozzarella, parma, bacon, fresh arugula</p>
+      <hr>
+
+    </div>
+
+    <div id="Pasta" class="w3-container menu w3-padding-32 w3-white">
+      <h1><b>Lasagna</b> <span class="w3-tag w3-grey w3-round">Popular</span> <span class="w3-right w3-tag w3-dark-grey w3-round">$13.50</span></h1>
+      <p class="w3-text-grey">Special sauce, mozzarella, parmesan, ground beef</p>
+      <hr>
+   
+      <h1><b>Ravioli</b> <span class="w3-right w3-tag w3-dark-grey w3-round">$14.50</span></h1>
+      <p class="w3-text-grey">Ravioli filled with cheese</p>
+      <hr>
+      
+      <h1><b>Spaghetti Classica</b> <span class="w3-right w3-tag w3-dark-grey w3-round">$11.00</span></h1>
+      <p class="w3-text-grey">Fresh tomatoes, onions, ground beef</p>
+      <hr>
+
+      <h1><b>Seafood pasta</b> <span class="w3-right w3-tag w3-dark-grey w3-round">$25.50</span></h1>
+      <p class="w3-text-grey">Salmon, shrimp, lobster, garlic</p>
+    </div>
+
+
+    <div id="Appetizer" class="w3-container menu w3-padding-32 w3-white">
+      <h1><b>Today's Soup</b> <span class="w3-tag w3-grey w3-round">Seasonal</span><span class="w3-right w3-tag w3-dark-grey w3-round">$5.50</span></h1>
+      <p class="w3-text-grey">Ask the waiter</p>
+      <hr>
+   
+      <h1><b>Buffalo Chicken Strip</b> <span class="w3-right w3-tag w3-dark-grey w3-round">$9.95</span></h1>
+      <p class="w3-text-grey">Bread with pesto, tomatoes, onion, garlic</p>
+      <hr>
+      
+      <h1><b>Fried Calamari</b> <span class="w3-right w3-tag w3-dark-grey w3-round">$8.00</span></h1>
+      <p class="w3-text-grey">Served with your choices of hot, medium or mild sauce</p>
+      <hr>
+      
+      <h1><b>Calamari Salad</b> <span class="w3-right w3-tag w3-dark-grey w3-round">$11.95</span></h1>
+      <p class="w3-text-grey">Tomatoes and mozzarella</p>
+      <hr>
+
+      <h1><b>Chicken Strips</b> <span class="w3-right w3-tag w3-dark-grey w3-round">$9.00</span></h1>
+      <p class="w3-text-grey">Served with your choices of hot, medium or mild sauce</p>
+      <hr>
+
+      <h1><b>Garlic Bread</b> <span class="w3-right w3-tag w3-dark-grey w3-round">$3.95</span></h1>
+      <p class="w3-text-grey">Buttery with garlic and itailan seasoning</p>
+      <hr>
+    </div>
+
+    <div id="Subs" class="w3-container menu w3-padding-32 w3-white">
+      <b><p class="w3-text-grey">Hot Subs</p></b>
+      <p style="font-size:75%;">Small: $6.95&nbsp; Large: $9.95</p>
+      <hr>
+      <b><button onclick="document.getElementById('sub').style.display='block'" class="w3-button w3-white">Chicken Parm</button></b>
+      <p class="w3-text-grey">breaded chicken with tomato sauce and melted cheese</p>
+      <hr>
+   
+      <h1><b>Eggplant Parm</b> </h1>
+      <p class="w3-text-grey">Bread with pesto, tomatoes, onion, garlic</p>
+      <hr>
+      
+      <h1><b>Fried Calamari</b></h1>
+      <p class="w3-text-grey">Served with your choices of hot, medium or mild sauce</p>
+      <hr>
+      
+      <h1><b>Calamari Salad</b></h1>
+      <p class="w3-text-grey">Tomatoes and mozzarella</p>
+      <hr>
+
+      <h1><b>Chicken Strips</b></h1>
+      <p class="w3-text-grey">Served with your choices of hot, medium or mild sauce</p>
+      <hr>
+
+      <h1><b>Garlic Bread</b></h1>
+      <p class="w3-text-grey">Served with your choices of hot, medium or mild sauce</p>
+      <hr>
+    </div>
+
+    <div id="Salad" class="w3-container menu w3-padding-32 w3-white">
+      <p class="w3-text-grey">Salad</p>
+      <!--<p style="font-size:75%;">Small: $6.95 Large: $9.95</p>-->
+      <hr>
+      <h1><b>Antipasto</b> <span class="w3-tag w3-grey w3-round"></span></h1>
+      <p class="w3-text-grey">Ask the waiter</p>
+      <hr>
+   
+      <h1><b>Caesar</b> </h1>
+      <p class="w3-text-grey">Bread with pesto, tomatoes, onion, garlic</p>
+      <hr>
+      
+      <h1><b>Chicken Caesar Salad</b></h1>
+      <p class="w3-text-grey">Your choice of grilled chicken or chicken cutlet</p>
+      <hr>
+      
+      <h1><b>Chicken Salad</b></h1>
+      <p class="w3-text-grey">Your choice of grilled chicken or chicken cutlet</p>
+      <hr>
+
+      <h1><b>Buffalo Chicken Salad</b></h1>
+      <p class="w3-text-grey">Your choice of grilled chicken or chicken cutlet</p>
+      <hr>
+
+      <h1><b>Mixed Salad</b></h1>
+      <p class="w3-text-grey">Your choice of grilled chicken or chicken cutlet</p>
+      <hr>
+
+      <h1><b>Italian Steak Salad</b></h1>
+      <p class="w3-text-grey">Fresh mozzerella & roasted peppers</p>
+      <hr>
+
+      <h1><b>Shrimp Caesar Salad</b></h1>
+      <p class="w3-text-grey">Your choice of grilled or fried shrimp</p>
+      <hr>
+
+      <h1><b>Tuna Salad</b></h1>
+      <p class="w3-text-grey">Fresh mozzerella & roasted peppers</p>
+      <hr>
+
+      <h1><b>Turkey Salad</b></h1>
+      <p class="w3-text-grey">Fresh mozzerella & roasted peppers</p>
+      <hr>
+    </div>
+  </div>
+</div>
+
+
+<!-- Footer -->
+<footer class="w3-center w3-black w3-padding-48 w3-xxlarge">
+  <p>Powered by <a href="pizza_main.html" title="W3.CSS" target="_blank" class="w3-hover-text-green">w3.css</a></p>
+</footer>
+
+<script>
+// Tabbed Menu
+function openMenu(evt, menuName) {
+  var i, x, tablinks;
+  x = document.getElementsByClassName("menu");
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < x.length; i++) {
+     tablinks[i].className = tablinks[i].className.replace(" w3-red", "");
+  }
+  document.getElementById(menuName).style.display = "block";
+  evt.currentTarget.firstElementChild.className += " w3-red";
+}
+document.getElementById("myLink").click();
+</script>
+
+<!-- Contact Modal -->
+<div id="contact" class="w3-modal">
+  <div class="w3-modal-content w3-animate-zoom">
+    <div class="w3-container w3-black">
+    <form action="order_page.html" target="_blank">
+      <span onclick="document.getElementById('contact').style.display='none'" class="w3-button w3-display-topright w3-large">x</span>
+      <h1>Plain</h1>
+    </div>
+    
+    <div class="w3-container">
+    <!--<h3> How many order?</h3>
+    <p><input class="w3-input w3-padding-16 w3-border" type="Number" placeholder="Enter the Quantity: " required name="Enter the Quantity: "</p>-->
+      <h3>Special Request:</h3>
+        <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Message \ Special requirements" required name="Message"></p>
+        <p><button class="w3-button" type="submit">Order</button></p>
+      </form>
+    </div>
+  </div>
+</div>
+<!-- Contact Modal -->
+<div id="sub" class="w3-modal">
+  <div class="w3-modal-content w3-animate-zoom">
+    <div class="w3-container w3-black">
+    <form action="/action_page.php" target="_blank">
+      <span onclick="document.getElementById('sub').style.display='none'" class="w3-button w3-display-topright w3-large">x</span>
+      <h1>Chicken Parm</h1>
+    </div>
+    
+    <div class="w3-container">
+      
+    <label class="radio-inline">
+      <input type="radio" name="optradio" checked>Large: $9.95
+    </label>
+    &nbsp;
+    <label class="radio-inline">
+      <input type="radio" name="optradio">small: $6:95
+    </label>
+
+      <h3>Special Request:</h3>
+        <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Message \ Special requirements" required name="Message"></p>
+        <p><button class="w3-button" type="submit">Order</button></p>
+      </form>
+    </div>
+  </div>
+</div>
+</body>
+</html>
