@@ -1,0 +1,1286 @@
+{
+  "pizza": [
+    {
+      "id": "1",
+      "Name": "Plain Cheese",
+      "Description": "Mozzarella with Marinara",
+      "Price": "$11.25"
+    },
+    {
+      "id": "2",
+      "Name": "Pepperoni",
+      "Description": "Pepperoni, Mozzarella with Marinara",
+      "Price": "$12.95"
+    },
+    {
+      "id": "3",
+      "Name": "Peppers",
+      "Description": "Mozzarella and Peppers with Marinara",
+      "Price": "$12.95"
+    },
+    {
+      "id": "4",
+      "Name": "Anchovies",
+      "Description": " Mozzarella and Anchovies with Marinara",
+      "Price": "$12.95"
+    },
+    {
+      "id": "5",
+      "Name": "Sausage",
+      "Description": "Mozzarella and Sausage with Marinara",
+      "Price": "$12.45"
+    },
+    {
+      "id": "6",
+      "Name": "Onion",
+      "Description": "Mozzarella and Onion with Marinara",
+      "Price": "$12.95"
+    },
+    {
+      "id": "7",
+      "Name": "Personal",
+      "Description": "Mozzarella with Marinara",
+      "Price": "$9.95"
+    },
+    {
+      "id": "8",
+      "Name": "Extra Cheese",
+      "Description": "Loaded Mozzarella with Marinara",
+      "Price": "$12.95"
+    },
+    {
+      "id": "9",
+      "Name": "Ham",
+      "Description": "Mozzarella and Ham with Marinara",
+      "Price": "$12.95"
+    },
+    {
+      "id": "10",
+      "Name": "Veggie",
+      "Description": "Mozzarella and Veggie with Marinara",
+      "Price": "$14.95"
+    },
+    {
+      "id": "11",
+      "Name": "Mushroom",
+      "Description": "Mozzarella and Mushroom with Marinara",
+      "Price": "$12.95"
+    },
+    {
+      "id": "12",
+      "Name": "Meatball",
+      "Description": "Mozzarella and Meatball with Marinara",
+      "Price": "$12.95"
+    },
+    {
+      "id": "13",
+      "Name": "Olive",
+      "Description": "Mozzarella and Olive with Marinara",
+      "Price": "$12.95"
+    },
+    {
+      "id": "14",
+      "Name": "Calzone",
+      "Description": "Mozzarella with Marinara dipping",
+      "Price": "$8.50",
+      "Large": "$10.50"
+    },
+    {
+      "id": "15",
+      "Name": "Sicilian",
+      "Description": "Mozzarella with Marinara in Square Cuts",
+      "Price": "$15.95"
+    },
+    {
+      "id": "16",
+      "Name": "Double Dough",
+      "Description": "Thick and Doughy Crust",
+      "Price": "$12.95"
+    },
+    {
+      "id": "17",
+      "Name": "Special",
+      "Description": "Algieri's favorite toppings",
+      "Price": "$15.95"
+    }
+  ],
+  "pasta": [
+    {
+      "id": "18",
+      "Name": "Pasta With Butter Sauce",
+      "Description": "Your Choice of spaghetti, linguini or penne",
+      "Price": "$6.25"
+    },
+    {
+      "id": "19",
+      "Name": "Pasta With Clam Sauce(Red or White)",
+      "Description": "Your Choice of spaghetti, linguini or penne",
+      "Price": "$8.95"
+    },
+    {
+      "id": "20",
+      "Name": "Pasta With Marinara Sauce",
+      "Description": "Your Choice of spaghetti, linguini or penne",
+      "Price": "$6.95"
+    },
+    {
+      "id": "21",
+      "Name": "Pasta With Meat Sauce",
+      "Description": "Your Choice of spaghetti, linguini or penne",
+      "Price": "$7.95"
+    },
+    {
+      "id": "22",
+      "Name": "Pasta With Tomato Sauce",
+      "Description": "Your Choice of spaghetti, linguini or penne",
+      "Price": "$6.25"
+    },
+    {
+      "id": "23",
+      "Name": "Cavatelli and Broccoli",
+      "Description": "",
+      "Price": "$8.25"
+    },
+    {
+      "id": "24",
+      "Name": "Cavatelli and Ricotta",
+      "Description": "",
+      "Price": "$8.95"
+    },
+    {
+      "id": "25",
+      "Name": "Pasta Vodka",
+      "Description": "Your choice of spaghetti, linguini or penne",
+      "Price": "$9.95"
+    },
+    {
+      "id": "26",
+      "Name": "Fettuccine Alfredo",
+      "Description": "",
+      "Price": "$9.95"
+    },
+    {
+      "id": "27",
+      "Name": "Fettuccine Primavera",
+      "Description": "",
+      "Price": "$9.95"
+    },
+    {
+      "id": "28",
+      "Name": "Fettuccine Carbonara",
+      "Description": "",
+      "Price": "$9.95"
+    },
+    {
+      "id": "29",
+      "Name": "Fettuccine With Tomato Sauce",
+      "Description": "",
+      "Price": "$7.95"
+    },
+    {
+      "id": "30",
+      "Name": "Tortellini Carbonara",
+      "Description": "",
+      "Price": "$9.95"
+    },
+    {
+      "id": "31",
+      "Name": "Tortellini with Tomato Sauce",
+      "Description": "",
+      "Price": "$8.95"
+    },
+    {
+      "id": "32",
+      "Name": "Tortellini Primavera",
+      "Description": "",
+      "Price": "$9.95"
+    },
+    {
+      "id": "33",
+      "Name": "Tortellini Alfredo",
+      "Description": "",
+      "Price": "$9.95"
+    }
+  ],
+  "speciality": [
+    {
+      "id": "34",
+      "Name": "Artichoke",
+      "Description": "",
+      "Price": "$13.50"
+    },
+    {
+      "id": "34",
+      "Name": "Bacon",
+      "Description": "",
+      "Price": "$14.00"
+    },
+    {
+      "id": "35",
+      "Name": "Broccoli",
+      "Description": "",
+      "Price": "$13.50"
+    },
+    {
+      "id": "36",
+      "Name": "Broccoli Rabe",
+      "Description": "",
+      "Price": "$15.95"
+    },
+    {
+      "id": "37",
+      "Name": "Broccoli and Ricotta",
+      "Description": "",
+      "Price": "$15.95"
+    },
+    {
+      "id": "38",
+      "Name": "Broccoli Rabe and Ricotta",
+      "Description": "",
+      "Price": "$16.95"
+    },
+    {
+      "id": "39",
+      "Name": "Buffalo Chicken",
+      "Description": "",
+      "Price": "$16.95"
+    },
+    {
+      "id": "40",
+      "Name": "Chicken (Grilled or Fried)",
+      "Description": "",
+      "Price": "$15.95"
+    },
+    {
+      "id": "41",
+      "Name": "Eggplant",
+      "Description": "",
+      "Price": "$13.95"
+    },
+    {
+      "id": "42",
+      "Name": "Chicken and Grilled Eggplant",
+      "Description": "",
+      "Price": "$16.95"
+    },
+    {
+      "id": "43",
+      "Name": "Chicken Marsala",
+      "Description": "",
+      "Price": "$16.95"
+    },
+    {
+      "id": "44",
+      "Name": "Chicken Murphy",
+      "Description": "",
+      "Price": "$16.95"
+    },
+    {
+      "id": "45",
+      "Name": "Chicken and Roasted Peppers",
+      "Description": "",
+      "Price": "$16.95"
+    },
+    {
+      "id": "46",
+      "Name": "Chicken Parm",
+      "Description": "",
+      "Price": "$15.95"
+    },
+    {
+      "id": "47",
+      "Name": "Five Cheese",
+      "Description": "",
+      "Price": "$16.95"
+    },
+    {
+      "id": "48",
+      "Name": "Hawaiian",
+      "Description": "",
+      "Price": "$16.95"
+    },
+    {
+      "id": "49",
+      "Name": "Spinach and Ricotta",
+      "Description": "",
+      "Price": "$15.95"
+    },
+    {
+      "id": "50",
+      "Name": "Tomatoes",
+      "Description": "",
+      "Price": "$12.95"
+    },
+    {
+      "id": "51",
+      "Name": "Tomato, Fresh Basil, Garlic",
+      "Description": "",
+      "Price": "$14.95"
+    },
+    {
+      "id": "52",
+      "Name": "White Pie",
+      "Description": "",
+      "Price": "$14.95"
+    },
+    {
+      "id": "53",
+      "Name": "Mini Sicillian",
+      "Description": "",
+      "Price": "$9.95"
+    },
+    {
+      "id": "54",
+      "Name": "Grandma Pie",
+      "Description": "Rectangular pan pizza with fresh mozzarella, fresh basil & sprinkle with grated cheese.",
+      "Price": "$14.95"
+    },
+    {
+      "id": "55",
+      "Name": "Italian Veggie",
+      "Description": "Broccoli rabe, eggplant, roasted peppers, Italian olives, artichoke hearts.",
+      "Price": "$18.95"
+    },
+    {
+      "id": "56",
+      "Name": "Margherita Pizza",
+      "Description": "Fresh mozzarella, fresh basil, sprinkled with grated cheese.",
+      "Price": "$14.95"
+    },
+    {
+      "id": "57",
+      "Name": "Meat Lovers",
+      "Description": "Pepperoni, meatballs, sausage & bacon.",
+      "Price": "$6.25"
+    }
+  ],
+  "appetizer": [
+    {
+      "id": "58",
+      "Name": "Buffalo Chicken Strips ",
+      "Description": "",
+      "Price": "$9.95"
+    },
+    {
+      "id": "59",
+      "Name": "Calamari Salad",
+      "Description": "",
+      "Price": "$11.95"
+    },
+    {
+      "id": "60",
+      "Name": "Chicken Strips",
+      "Description": "",
+      "Price": "$9.00"
+    },
+    {
+      "id": "61",
+      "Name": "Scungilli Salad",
+      "Description": "",
+      "Price": "$12.95"
+    },
+    {
+      "id": "62",
+      "Name": "Seafood Salad",
+      "Description": "",
+      "Price": "$14.95"
+    },
+    {
+      "id": "63",
+      "Name": "Mozzarella Sticks",
+      "Description": "",
+      "Price": "$7.95"
+    },
+    {
+      "id": "64",
+      "Name": "Chicken Wings",
+      "Description": "Served with your choice of hot, barbecue, or mild sauce.",
+      "Price": "$4.99",
+      "Large": "$8.99"
+    },
+    {
+      "id": "65",
+      "Name": "Garlic Bread",
+      "Description": "",
+      "Price": "$3.95"
+    },
+    {
+      "id": "66",
+      "Name": "House Wings(8)",
+      "Description": "",
+      "Price": "$8.00"
+    },
+    {
+      "id": "67",
+      "Name": "Fried Calamari",
+      "Description": "Served with your choice hot, mild, medium sauce.",
+      "Price": "$8.00"
+    },
+    {
+      "id": "68",
+      "Name": "Mussels Marinara",
+      "Description": "",
+      "Price": "$8.00",
+      "Large": "$11.00"
+    },
+    {
+      "id": "69",
+      "Name": "Clams Organato",
+      "Description": "",
+      "Price": "$8.00",
+      "Large": "$11.00"
+    }
+  ],
+  "soup": [
+    {
+      "id": "68",
+      "Name": "Escarole and Beans(Red & White)",
+      "Description": "",
+      "Price": "$4.95",
+      "Large": "$8.95"
+    },
+    {
+      "id": "69",
+      "Name": "Pasta Fagioli(Red & White)",
+      "Description": "",
+      "Price": "$4.95",
+      "Large": "$8.95"
+    },
+    {
+      "id": "70",
+      "Name": "Tortellini and Brodo",
+      "Description": "",
+      "Price": "$4.95",
+      "Large": "$8.95"
+    },
+    {
+      "id": "71",
+      "Name": "Stracciatella",
+      "Description": "",
+      "Price": "$4.95",
+      "Large": "$8.95"
+    }
+  ],
+  "salad": [
+    {
+      "id": "72",
+      "Name": "Antipasto",
+      "Description": "",
+      "Price": "$6.50",
+      "Large": "$9.50"
+    },
+    {
+      "id": "73",
+      "Name": "Antipasto Italiano",
+      "Description": "",
+      "Price": "$7.50",
+      "Large": "$10.50"
+    },
+    {
+      "id": "74",
+      "Name": "Buffalo Chicken Salad",
+      "Description": "",
+      "Price": "$8.50",
+      "Large": "$10.50"
+    },
+    {
+      "id": "75",
+      "Name": "Mixed Salad",
+      "Description": "",
+      "Price": "$4.95",
+      "Large": "$7.95"
+    },
+    {
+      "id": "76",
+      "Name": "Lettuce and Tomato",
+      "Description": "",
+      "Price": "$4.95",
+      "Large": "$6.95"
+    },
+    {
+      "id": "77",
+      "Name": "Italian Steak Salad",
+      "Description": "Fresh mozzarella & roasted peppers",
+      "Price": "$8.25",
+      "Large": "$10.95"
+    },
+    {
+      "id": "78",
+      "Name": "Shrimp Caesar Salad",
+      "Description": "Your choice of grilled or fried shrimp",
+      "Price": "$8.95",
+      "Large": "$10.95"
+    },
+    {
+      "id": "79",
+      "Name": "Tomato and Fresh Mozzarella",
+      "Description": "",
+      "Price": "$6.95",
+      "Large": "$9.95"
+    },
+    {
+      "id": "80",
+      "Name": "Tuna Salad",
+      "Description": "",
+      "Price": "$6.95",
+      "Large": "$9.95"
+    },
+    {
+      "id": "81",
+      "Name": "Turkey Salad",
+      "Description": "",
+      "Price": "$6.95",
+      "Large": "$9.95"
+    },
+    {
+      "id": "82",
+      "Name": "Chicken Salad",
+      "Description": "Your Choice of grilled or cutlet chicken.",
+      "Price": "$6.50",
+      "Large": "$9.50"
+    },
+    {
+      "id": "83",
+      "Name": "Chicken Caesar Salad",
+      "Description": "Your Choice of grilled or cutlet chicken.",
+      "Price": "$6.95",
+      "Large": "$9.95"
+    },
+    {
+      "id": "84",
+      "Name": "Caesar Salad",
+      "Description": "",
+      "Price": "$4.95",
+      "Large": "$6.95"
+    },
+    {
+      "id": "85",
+      "Name": "Fresh Mozzarella and Roasted Peppers",
+      "Description": "",
+      "Price": "$7.50",
+      "Large": "$10.50"
+    }
+  ],
+  "hotsub": [
+    {
+      "id": "86",
+      "Name": "Chicken with Lettuce and Tomato",
+      "Description": "Your choice of grilled chicken cutlet",
+      "Price": "$6.95",
+      "Large": "$9.95"
+    },
+    {
+      "id": "87",
+      "Name": "Eggplant Parm",
+      "Description": "",
+      "Price": "$6.95",
+      "Large": "$9.95"
+    },
+    {
+      "id": "88",
+      "Name": "Meatball Parm",
+      "Description": "",
+      "Price": "$6.95",
+      "Large": "$9.95"
+    },
+    {
+      "id": "89",
+      "Name": "Pepperoni and Egg",
+      "Description": "",
+      "Price": "$6.95",
+      "Large": "$9.95"
+    },
+    {
+      "id": "90",
+      "Name": "Sausage Parm",
+      "Description": "",
+      "Price": "$6.95",
+      "Large": "$9.95"
+    },
+    {
+      "id": "91",
+      "Name": "Hot Mozzarella",
+      "Description": "",
+      "Price": "$7.95",
+      "Large": "$10.95"
+    },
+    {
+      "id": "92",
+      "Name": "Meatball",
+      "Description": "",
+      "Price": "$6.50",
+      "Large": "$9.50"
+    },
+    {
+      "id": "93",
+      "Name": "Veal Parm",
+      "Description": "",
+      "Price": "$7.95",
+      "Large": "$10.95"
+    },
+    {
+      "id": "94",
+      "Name": "Veal with Lettuce and Tomato",
+      "Description": "",
+      "Price": "$7.95",
+      "Large": "$10.95"
+    },
+    {
+      "id": "95",
+      "Name": "Chicken Parm",
+      "Description": "",
+      "Price": "$6.95",
+      "Large": "$9.95"
+    },
+    {
+      "id": "96",
+      "Name": "Italian Sausage",
+      "Description": "Served with onion, peppers and potatoes",
+      "Price": "$6.95",
+      "Large": "$9.95"
+    },
+    {
+      "id": "97",
+      "Name": "Peppers and Egg",
+      "Description": "",
+      "Price": "$6.95",
+      "Large": "$9.95"
+    },
+    {
+      "id": "98",
+      "Name": "Potato and Egg",
+      "Description": "",
+      "Price": "$6.95",
+      "Large": "$9.95"
+    },
+    {
+      "id": "99",
+      "Name": "Sausage and Peppers",
+      "Description": "",
+      "Price": "$6.95",
+      "Large": "$9.95"
+    },
+    {
+      "id": "100",
+      "Name": "Italian Hot Dog",
+      "Description": "Served with Onions, Peppers and Potatoes",
+      "Price": "$5.95",
+      "Large": "$7.95"
+    },
+    {
+      "id": "101",
+      "Name": "Potato Pepperoni and Egg",
+      "Description": "",
+      "Price": "$7.95",
+      "Large": "$10.95"
+    },
+    {
+      "id": "102",
+      "Name": "Steak and Cheese",
+      "Description": "Served with Onions, Peppers and Potatoes",
+      "Price": "$7.95",
+      "Large": "$10.95"
+    },
+    {
+      "id": "103",
+      "Name": "Sausage",
+      "Description": "Served with Sauce",
+      "Price": "$6.50",
+      "Large": "$9.50"
+    }
+  ],
+  "coldsub": [
+    {
+      "id": "104",
+      "Name": "Capicollo",
+      "Description": "",
+      "Price": "$7.95",
+      "Large": "$9.95"
+    },
+    {
+      "id": "105",
+      "Name": "Ham, Salami and Provolone",
+      "Description": "",
+      "Price": "$6.95",
+      "Large": "$9.95"
+    },
+    {
+      "id": "106",
+      "Name": "Prosciutto",
+      "Description": "",
+      "Price": "$7.95",
+      "Large": "$10.95"
+    },
+    {
+      "id": "107",
+      "Name": "Roast Beef",
+      "Description": "",
+      "Price": "$6.95",
+      "Large": "$9.95"
+    },
+    {
+      "id": "108",
+      "Name": "Super Sub",
+      "Description": "",
+      "Price": "$9.95",
+      "Large": "$12.95"
+    },
+    {
+      "id": "109",
+      "Name": "Turkey",
+      "Description": "",
+      "Price": "$6.95",
+      "Large": "$9.95"
+    },
+    {
+      "id": "110",
+      "Name": "Tuna",
+      "Description": "",
+      "Price": "$6.95",
+      "Large": "$9.95"
+    }
+  ],
+  "burger": [
+    {
+      "id": "111",
+      "Name": "Hamburger",
+      "Description": "Served with Lettuce and Tomato",
+      "Price": "$2.95"
+    },
+    {
+      "id": "112",
+      "Name": "Cheeseburger",
+      "Description": "Served with Lettuce and Tomato",
+      "Price": "$3.95"
+    },
+    {
+      "id": "113",
+      "Name": "Hamburger Deluxe",
+      "Description": "Served with Lettuce and Tomato and a side of French Fries",
+      "Price": "$5.25"
+    },
+    {
+      "id": "114",
+      "Name": "Cheeseburger Deluxe",
+      "Description": "Served with Lettuce and Tomato and a side of French Fries",
+      "Price": "$6.25"
+    },
+    {
+      "id": "115",
+      "Name": "Pizza Burger",
+      "Description": "",
+      "Price": "$3.95"
+    },
+    {
+      "id": "116",
+      "Name": "California Cheeseburger",
+      "Description": "Served with Lettuce, Tomato and Mayo",
+      "Price": "$4.95"
+    }
+  ],
+  "panini": [
+    {
+      "id": "117",
+      "Name": "Buffalo Chicken Panini",
+      "Description": "With Fresh Mozzarella",
+      "Price": "$7.95"
+    },
+    {
+      "id": "118",
+      "Name": "Chicken Cutlet and Cheese",
+      "Description": "",
+      "Price": "$6.95"
+    },
+    {
+      "id": "119",
+      "Name": "Chicken Cutlet with Fresh Mozzarella",
+      "Description": "",
+      "Price": "$6.95"
+    },
+    {
+      "id": "120",
+      "Name": "Eggplant and Fresh Mozzarella",
+      "Description": "",
+      "Price": "$6.95"
+    },
+    {
+      "id": "121",
+      "Name": "Ham, Salami, Cheese",
+      "Description": "",
+      "Price": "$6.95"
+    },
+    {
+      "id": "122",
+      "Name": "Roast Beef and Cheese",
+      "Description": "",
+      "Price": "$6.95"
+    },
+    {
+      "id": "123",
+      "Name": "Steak and Cheese",
+      "Description": "",
+      "Price": "$6.95"
+    },
+    {
+      "id": "124",
+      "Name": "Turkey and Cheese",
+      "Description": "",
+      "Price": "$6.95"
+    }
+  ],
+  "wrap": [
+    {
+      "id": "124",
+      "Name": "Buffalo Chicken",
+      "Description": "",
+      "Price": "$6.95"
+    },
+    {
+      "id": "125",
+      "Name": "Chicken Cutlet, Fresh Mozzarella and Roasted Peppers",
+      "Description": "",
+      "Price": "$6.95"
+    },
+    {
+      "id": "126",
+      "Name": "Grilled Chicken",
+      "Description": "",
+      "Price": "$6.95"
+    },
+    {
+      "id": "127",
+      "Name": "Grilled Chicken Caesar",
+      "Description": "",
+      "Price": "$6.95"
+    },
+    {
+      "id": "128",
+      "Name": "Pizza on a Wrap",
+      "Description": "",
+      "Price": "$6.95"
+    },
+    {
+      "id": "129",
+      "Name": "Steak",
+      "Description": "",
+      "Price": "$6.95"
+    },
+    {
+      "id": "130",
+      "Name": "Tuna",
+      "Description": "",
+      "Price": "$6.95"
+    },
+    {
+      "id": "131",
+      "Name": "Turkey and Cheese",
+      "Description": "",
+      "Price": "$6.95"
+    },
+    {
+      "id": "132",
+      "Name": "Veggie Wrap",
+      "Description": "Served with Eggplant, Roasted Peppers, Tomatoes and Romaine Lettuce",
+      "Price": "$6.95"
+    }
+  ],
+  "bakedpasta": [
+    {
+      "id": "133",
+      "Name": "Baked Ziti",
+      "Description": "",
+      "Price": "$8.50"
+    },
+    {
+      "id": "134",
+      "Name": "Baked Cavatelli",
+      "Description": "",
+      "Price": "$8.95"
+    },
+    {
+      "id": "135",
+      "Name": "Lasagna",
+      "Description": "Your Choice of Meat or Veggie",
+      "Price": "$9.95"
+    },
+    {
+      "id": "136",
+      "Name": "Manicotti",
+      "Description": "",
+      "Price": "$8.50"
+    },
+    {
+      "id": "137",
+      "Name": "Ravioli",
+      "Description": "",
+      "Price": "$6.95"
+    },
+    {
+      "id": "138",
+      "Name": "Stuffed Shells",
+      "Description": "",
+      "Price": "$8.50"
+    }
+  ],
+  "seafood": [
+    {
+      "id": "139",
+      "Name": "Calamari Marinara",
+      "Description": "(Hot/medium/sweet) calamari rings sauteed in a white wine sauce and garlic, simmered in our home-made sauce.",
+      "Price": "$11.95"
+    },
+    {
+      "id": "140",
+      "Name": "Fried Calamari",
+      "Description": "(Hot/medium/sweet) calamari floured and fried to a golden brown.",
+      "Price": "$11.95"
+    },
+    {
+      "id": "141",
+      "Name": "Fried Shrimp",
+      "Description": "(Hot/medium/sweet) six jumbo shrimp  fried to a golden brown.",
+      "Price": "$12.95"
+    },
+    {
+      "id": "142",
+      "Name": "Scungilli Marinara",
+      "Description": "(Hot/sweet) tender Scungilli sauteed in garlic, wine and simmered in our Marinara sauce",
+      "Price": "$12.95"
+    },
+    {
+      "id": "143",
+      "Name": "Shrimp Cocktail",
+      "Description": "",
+      "Price": "$10.95"
+    },
+    {
+      "id": "144",
+      "Name": "Shrimp Francese",
+      "Description": "Six egg battered shrimp seved in a lemon wine sauce",
+      "Price": "$12.95"
+    },
+    {
+      "id": "145",
+      "Name": "Shrimp Marinara",
+      "Description": "(Hot/sweet) Six jumbo shrimp sauteed in garlic, then  served in a Marinara sauce.",
+      "Price": "$12.95"
+    },
+    {
+      "id": "146",
+      "Name": "Shrimp Parm",
+      "Description": "Six jumbo, breaded shrimp baked with our delicious red sauce and mozzarella cheese",
+      "Price": "$13.95"
+    },
+    {
+      "id": "147",
+      "Name": "Shrimp Scampi",
+      "Description": "Six jumbo shrimp sauteed in garlic, butter and wine sauce",
+      "Price": "$12.95"
+    },
+    {
+      "id": "148",
+      "Name": "Zuppa di Pesce",
+      "Description": "(Hot/medium/sweet) Marinara sauce served with shrimp, calamari, Scungilli and mussels over linguini.",
+      "Price": "$16.95"
+    }
+  ],
+  "entree": [
+    {
+      "id": "149",
+      "Name": "Broccoli Rage",
+      "Description": "",
+      "Price": "$13.95"
+    },
+    {
+      "id": "150",
+      "Name": "Chicken Cacciatore",
+      "Description": "Chicken in a hearty marinara sauce, topped with sauteed mushrooms and onions.",
+      "Price": "$13.95"
+    },
+    {
+      "id": "151",
+      "Name": "Chicken and Broccoli",
+      "Description": "",
+      "Price": "$13.95"
+    },
+    {
+      "id": "152",
+      "Name": "Chicken, Cavatelli, and Broccoli",
+      "Description": "Chicken and Cavatelli, sauteed with garlic and broccoli",
+      "Price": "$13.95"
+    },
+    {
+      "id": "153",
+      "Name": "Chicken Marsala",
+      "Description": "Chicken scallopini prepared in a marsala wine sauce, served with mushrooms.",
+      "Price": "$13.95"
+    },
+    {
+      "id": "154",
+      "Name": "Chicken Francese",
+      "Description": "Chicken scallopini sauteed in butter and simmered in a lemon and white wine sauce topped with mushrooms.",
+      "Price": "$13.95"
+    },
+    {
+      "id": "155",
+      "Name": "Chicken Murphy",
+      "Description": "(Hot/sweet) chicken with sliced garlic, sauteed peppers, mushrooms and potatoes, served in a wine sauce.",
+      "Price": "$13.95"
+    },
+    {
+      "id": "156",
+      "Name": "Chicken Parm",
+      "Description": "Chicken cutlets baked with our delicious red sauce and mozzarella cheese.",
+      "Price": "$13.95"
+    },
+    {
+      "id": "157",
+      "Name": "Chicken Piccata",
+      "Description": "Chicken scallopini sauteed in butter, then simmered in a lemon and white wine sauce.",
+      "Price": "$13.95"
+    },
+    {
+      "id": "158",
+      "Name": "Chicken Pizziola",
+      "Description": "Chicken served in marinara sauce with olives and mushrooms and a hint of anchovies.",
+      "Price": "$13.95"
+    },
+    {
+      "id": "159",
+      "Name": "Chicken Saltimbocca",
+      "Description": "Chicken scallopini topped with prosciutto and mozzarella, in a white wine sauce over spinach.",
+      "Price": "$13.95"
+    },
+    {
+      "id": "160",
+      "Name": "Chicken Savoy",
+      "Description": "Chicken simmered in balsamic vinegar and garlic sauce.",
+      "Price": "$13.95"
+    },
+    {
+      "id": "161",
+      "Name": "Chicken Tortellini Alfredo",
+      "Description": "Chicken and cheese tortellini, served with our home-made alfredo sauce.",
+      "Price": "$13.95"
+    },
+    {
+      "id": "162",
+      "Name": "Eggplant Parm",
+      "Description": "Layers of sliced, breaded eggplant and mozzarella, baked with mozzarella cheese on top with our delicious red sauce.",
+      "Price": "$12.95"
+    },
+    {
+      "id": "163",
+      "Name": "Eggplant Rollatini",
+      "Description": "Sliced, breaded eggplant rolled with imported ham and mozzarella.",
+      "Price": "$12.95"
+    },
+    {
+      "id": "164",
+      "Name": "Fettuccine and Shrimp Alfredo",
+      "Description": "",
+      "Price": "$14.95"
+    },
+    {
+      "id": "165",
+      "Name": "Penne Vodka with Chicken",
+      "Description": "A pink cream sauce prepared with sauteed onions and prosciutto, served with your choice of grilled chicken or chicken cutlet.",
+      "Price": "$14.95"
+    },
+    {
+      "id": "166",
+      "Name": "Veal Francese",
+      "Description": "Veal scallopini prepared in a lemon and white wine sauce, served with mushrooms. ",
+      "Price": "$14.95"
+    },
+    {
+      "id": "167",
+      "Name": "Veal Marsala",
+      "Description": "Veal scallopini prepared in a marsala wine sauce, served with mushrooms and prosciutto.",
+      "Price": "$14.95"
+    },
+    {
+      "id": "168",
+      "Name": "Veal Parm",
+      "Description": "Breaded veal cutlets baked with our delicious red sauce and mozzarella cheese.",
+      "Price": "$13.95"
+    },
+    {
+      "id": "169",
+      "Name": "Veal Pizziola",
+      "Description": "Veal scallopini served in marinara sauce, with olives, mushrooms and a hint of anchovies.",
+      "Price": "$13.95"
+    },
+    {
+      "id": "170",
+      "Name": "Veal Saltimbocca",
+      "Description": "Veal scallopini topped with prosciutto and mozzarella, served in a white wine sauce over spinach.",
+      "Price": "$14.95"
+    }
+  ],
+  "side": [
+    {
+      "id": "171",
+      "Name": "Cheese Fries",
+      "Description": "",
+      "Price": "$5.95"
+    },
+    {
+      "id": "172",
+      "Name": "Cheese Fries with Brown Gravy",
+      "Description": "",
+      "Price": "$6.95"
+    },
+    {
+      "id": "173",
+      "Name": "Grated Cheese",
+      "Description": "",
+      "Price": "$1.25"
+    },
+    {
+      "id": "174",
+      "Name": "Pizza Fries",
+      "Description": "",
+      "Price": "$6.95"
+    },
+    {
+      "id": "175",
+      "Name": "Fries",
+      "Description": "",
+      "Price": "$4.95"
+    },
+    {
+      "id": "176",
+      "Name": "Onion Rings",
+      "Description": "",
+      "Price": "$3.95"
+    },
+    {
+      "id": "177",
+      "Name": "Meatballs",
+      "Description": "",
+      "Price": "$4.25"
+    },
+    {
+      "id": "178",
+      "Name": "Pasta",
+      "Description": "",
+      "Price": "$3.95"
+    },
+    {
+      "id": "179",
+      "Name": "Sausage",
+      "Description": "",
+      "Price": "$4.25"
+    },
+    {
+      "id": "180",
+      "Name": "Sauteed Broccoli",
+      "Description": "",
+      "Price": "$3.95"
+    },
+    {
+      "id": "181",
+      "Name": "Sauteed Broccoli Rabe",
+      "Description": "",
+      "Price": "$4.95"
+    },
+    {
+      "id": "182",
+      "Name": "Sauteed Escarole",
+      "Description": "",
+      "Price": "$3.95"
+    },
+    {
+      "id": "183",
+      "Name": "Side of Sauce",
+      "Description": "",
+      "Price": "$1.25"
+    },
+    {
+      "id": "184",
+      "Name": "Side of Extra Dressing",
+      "Description": "",
+      "Price": "$0.80"
+    }
+  ],
+  "specialitysub": [
+    {
+      "id": "185",
+      "Name": "Buffalo Chicken",
+      "Description": "With Lettuce, Tomato and bleu cheese",
+      "Price": "$7.95",
+      "Large": "$10.95"
+    },
+    {
+      "id": "186",
+      "Name": "Chicken and Broccoli Rabe",
+      "Description": "Your choice of grilled chicken or chicken cutlet",
+      "Price": "$7.95",
+      "Large": "$10.95"
+    },
+    {
+      "id": "187",
+      "Name": "Chicken, Broccoli Rabe and Fresh Mozzarella",
+      "Description": "Your Choice of grilled chicken or chicken cutlet",
+      "Price": "$8.95",
+      "Large": "$10.95"
+    },
+    {
+      "id": "188",
+      "Name": "Chicken and Fresh Mozzarella",
+      "Description": "Your choice of grilled chicken or chicken cutlet",
+      "Price": "$7.95",
+      "Large": "$10.95"
+    },
+    {
+      "id": "189",
+      "Name": "Chicken Francese",
+      "Description": "",
+      "Price": "$7.95",
+      "Large": "$10.95"
+    },
+    {
+      "id": "190",
+      "Name": "Chicken Marsala",
+      "Description": "",
+      "Price": "$7.95",
+      "Large": "$10.95"
+    },
+    {
+      "id": "191",
+      "Name": "Chicken Savoy",
+      "Description": "",
+      "Price": "$7.95",
+      "Large": "$10.95"
+    },
+    {
+      "id": "192",
+      "Name": "Fish Filet",
+      "Description": "Served with Lettuce,Tomato and tartar sauce",
+      "Price": "$7.95",
+      "Large": "$10.95"
+    },
+    {
+      "id": "193",
+      "Name": "Killer Cheese Steak",
+      "Description": "Served with mushrooms, hot peppers, broccoli rabe and sharp provolone",
+      "Price": "$8.95",
+      "Large": "$11.95"
+    },
+    {
+      "id": "194",
+      "Name": "Roma Sub",
+      "Description": "Served with roast beef and melted mozzarella on garlic bread",
+      "Price": "$8.95",
+      "Large": "$11.95"
+    },
+    {
+      "id": "195",
+      "Name": "Shrimp Parm",
+      "Description": "",
+      "Price": "$8.95",
+      "Large": "$11.95"
+    }
+  ]
+}
