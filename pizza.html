@@ -18,10 +18,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    
+
     <style>
         /*
          Landing Zero theme - A free landing page theme from BootstrapZero
@@ -759,7 +756,7 @@
                         <a class="page-scroll" data-toggle="modal" title="A free Bootstrap video landing theme" href="#aboutModal">About</a>
                     </li>
 
-                    <li class="dropdown">
+                    <!--<li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-bell"></span><span class="badge" id=
                         ""value="0">0</span></a>
                         <ul class="dropdown-menu">
@@ -771,11 +768,11 @@
                             </a>
 
                         </ul>
-                    </li>
-                    <li>
+                    </li>-->
+                   <!-- <li>
                         <a href="#"><span class="glyphicon glyphicon-shopping-cart"></span><span class="badge" id=
                         "targetEl"value="0">0</span></a>
-                    </li>
+                    </li>-->
                 </ul>
             </div>
         </div>
@@ -786,7 +783,7 @@
                 <h1 class="cursive">Algieri's Pizza Restaurant</h1>
                 <h4>502 Union Ave Belleville, NJ</h4>
                 <hr>
-                <a href="#video-background" id="toggleVideo" data-toggle="collapse" class="btn btn-primary btn-xl">Toggle Video</a> &nbsp; <a href="#two" class="btn btn-primary btn-xl page-scroll">Get Started</a>
+                <a href="#video-background" id="toggleVideo" data-toggle="collapse" class="btn btn-primary btn-xl">Toggle Video</a> &nbsp; <a href="https://slicelife.com/restaurants/nj/belleville/07109/algieri-s-pizza/menu" class="btn btn-primary btn-xl page-scroll">Get Started</a>
             </div>
         </div>
         <video>
@@ -1680,7 +1677,7 @@
                 });
         });
     </script>
-    <script>
+    <!--<script>
          // ------- ADD TO CART FUNCTIONALITY
 function triggerPulse() {
    var t = document.getElementById("targetEl");
@@ -1709,20 +1706,19 @@ var b3 = document.getElementById("triggerEl");
 b3.addEventListener("click", incrementValue, false);
 </script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
-    <script type="text/javascript">
-        window.alert = function(){};
-        var defaultCSS = document.getElementById('bootstrap-css');
-        function changeCSS(css){
-            if(css) $('head > link').filter(':first').replaceWith('<link rel="stylesheet" href="'+ css +'" type="text/css" />'); 
-            else $('head > link').filter(':first').replaceWith(defaultCSS); 
-        }
-        $( document ).ready(function() {
-          var iframe_height = parseInt($('html').height()); 
-          window.parent.postMessage( iframe_height, 'https://bootsnipp.com');
-        });
-    </script>
-<script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY&callback=myMap"></script>
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script type="text/javascript">
+    window.alert = function(){};
+    var defaultCSS = document.getElementById('bootstrap-css');
+    function changeCSS(css){
+        if(css) $('head > link').filter(':first').replaceWith('<link rel="stylesheet" href="'+ css +'" type="text/css" />');
+        else $('head > link').filter(':first').replaceWith(defaultCSS);
+    }
+    $( document ).ready(function() {
+        var iframe_height = parseInt($('html').height());
+        window.parent.postMessage( iframe_height, 'https://bootsnipp.com');
+    });
+</script>-->
 </body>
 
 </html>
