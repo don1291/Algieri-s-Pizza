@@ -872,32 +872,18 @@
                             <div class="col-md-6">
                                 <div class="single_menu_list">
                                     <img src="http://infinityflamesoft.com/html/restarunt-preview/assets/img/menu/menu-5.jpg" alt="">
-                                    <div class="menu_content" ng-repeat="appetizer in appetizers">
-                                        <h4>{{appetizer.Name}} <span>{{appetizer.Price}}&nbsp &nbsp{{appetizer.Large}}</span></h4>
+                                    <div class="menu_content" ng-repeat="appetizer in appetizers" ng-hide="$odd">
+                                        <h4>{{appetizer.Name}} <span style="cursor:pointer"onclick="location.href='#'">{{appetizer.Large}}</span><span style="cursor:pointer"onclick="location.href='#'">{{appetizer.Price}}&nbsp &nbsp</span></h4>
                                         <p>{{appetizer.Description}}</p>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="single_menu_list">
-                                    <img src="http://infinityflamesoft.com/html/restarunt-preview/assets/img/menu/menu-4.jpg" alt="">
-                                    <div class="menu_content">
-                                        <h4>Chicken Fried Salad  <span>$45</span></h4>
-                                        <p>Aperiam tempore sit,perferendis numquam repudiandae porro voluptate dicta saepe facilis.</p>
-                                    </div>
-                                </div>
-                                <div class="single_menu_list">
                                     <img src="http://infinityflamesoft.com/html/restarunt-preview/assets/img/menu/menu-5.jpg" alt="">
-                                    <div class="menu_content">
-                                        <h4>Chicken Fried Salad  <span>$45</span></h4>
-                                        <p>Aperiam tempore sit,perferendis numquam repudiandae porro voluptate dicta saepe facilis.</p>
-                                    </div>
-                                </div>
-                                <div class="single_menu_list">
-                                    <img src="http://infinityflamesoft.com/html/restarunt-preview/assets/img/menu/menu-6.jpg" alt="">
-                                    <div class="menu_content">
-                                        <h4>Chicken Fried Salad  <span>$45</span></h4>
-                                        <p>Aperiam tempore sit,perferendis numquam repudiandae porro voluptate dicta saepe facilis.</p>
+                                    <div class="menu_content" ng-repeat="appetizer in appetizers" ng-hide="$even">
+                                        <h4>{{appetizer.Name}} <span>{{appetizer.Price}}&nbsp &nbsp{{appetizer.Large}}</span></h4>
+                                        <p>{{appetizer.Description}}</p>
                                     </div>
                                 </div>
                             </div>
@@ -908,7 +894,7 @@
                             <div class="col-md-6">
                                 <div class="single_menu_list">
                                     <img src="http://infinityflamesoft.com/html/restarunt-preview/assets/img/menu/menu-2.jpg" alt="">
-                                    <div class="menu_content" ng-repeat="salad in salads">
+                                    <div class="menu_content" ng-repeat="salad in salads"ng-hide="$odd">
                                         <h4>{{salad.Name}}  <span>{{salad.Price}}&nbsp &nbsp{{salad.Large}}</span></h4>
                                         <p>{{salad.Description}}</p>
                                     </div>
@@ -916,26 +902,12 @@
                             </div>
                             <div class="col-md-6">
                                 <div class="single_menu_list">
-                                    <img src="http://infinityflamesoft.com/html/restarunt-preview/assets/img/menu/menu-5.jpg" alt="">
-                                    <div class="menu_content">
-                                        <h4>Chicken Fried Salad  <span>$45</span></h4>
-                                        <p>Aperiam tempore sit,perferendis numquam repudiandae porro voluptate dicta saepe facilis.</p>
+                                    <img src="http://infinityflamesoft.com/html/restarunt-preview/assets/img/menu/menu-2.jpg" alt="">
+                                    <div class="menu_content" ng-repeat="salad in salads"ng-hide="$even">
+                                        <h4>{{salad.Name}}  <span>{{salad.Price}}&nbsp &nbsp{{salad.Large}}</span></h4>
+                                        <p>{{salad.Description}}</p>
                                     </div>
-                                </div>
-                                <div class="single_menu_list">
-                                    <img src="http://infinityflamesoft.com/html/restarunt-preview/assets/img/menu/menu-3.jpg" alt="">
-                                    <div class="menu_content">
-                                        <h4>Chicken Fried Salad  <span>$45</span></h4>
-                                        <p>Aperiam tempore sit,perferendis numquam repudiandae porro voluptate dicta saepe facilis.</p>
-                                    </div>
-                                </div>
-                                <div class="single_menu_list">
-                                    <img src="http://infinityflamesoft.com/html/restarunt-preview/assets/img/menu/menu-4.jpg" alt="">
-                                    <div class="menu_content">
-                                        <h4>Chicken Fried Salad  <span>$45</span></h4>
-                                        <p>Aperiam tempore sit,perferendis numquam repudiandae porro voluptate dicta saepe facilis.</p>
-                                    </div>
-                                </div>
+                                </div>   
                             </div>
                         </div>
                     </div>
@@ -944,7 +916,7 @@
                             <div class="col-md-6">
                                 <div class="single_menu_list">
                                     <img src="http://infinityflamesoft.com/html/restarunt-preview/assets/img/menu/menu-2.jpg" alt="">
-                                    <div class="menu_content" ng-repeat="pizza in pizzas">
+                                    <div class="menu_content" ng-repeat="pizza in pizzas" ng-hide="$odd">
                                         <h4>{{pizza.Name}}  <span>{{pizza.Price}}&nbsp &nbsp{{pizza.Large}}</span></h4>
                                         <p>{{pizza.Description}}</p>
                                     </div>
@@ -952,24 +924,10 @@
                             </div>
                             <div class="col-md-6">
                                 <div class="single_menu_list">
-                                    <img src="http://infinityflamesoft.com/html/restarunt-preview/assets/img/menu/menu-5.jpg" alt="">
-                                    <div class="menu_content">
-                                        <h4>Chicken Fried Salad  <span>$45</span></h4>
-                                        <p>Aperiam tempore sit,perferendis numquam repudiandae porro voluptate dicta saepe facilis.</p>
-                                    </div>
-                                </div>
-                                <div class="single_menu_list">
-                                    <img src="http://infinityflamesoft.com/html/restarunt-preview/assets/img/menu/menu-3.jpg" alt="">
-                                    <div class="menu_content">
-                                        <h4>Chicken Fried Salad  <span>$45</span></h4>
-                                        <p>Aperiam tempore sit,perferendis numquam repudiandae porro voluptate dicta saepe facilis.</p>
-                                    </div>
-                                </div>
-                                <div class="single_menu_list">
-                                    <img src="http://infinityflamesoft.com/html/restarunt-preview/assets/img/menu/menu-4.jpg" alt="">
-                                    <div class="menu_content">
-                                        <h4>Chicken Fried Salad  <span>$45</span></h4>
-                                        <p>Aperiam tempore sit,perferendis numquam repudiandae porro voluptate dicta saepe facilis.</p>
+                                    <img src="http://infinityflamesoft.com/html/restarunt-preview/assets/img/menu/menu-2.jpg" alt="">
+                                    <div class="menu_content" ng-repeat="pizza in pizzas" ng-hide="$even">
+                                        <h4>{{pizza.Name}}  <span>{{pizza.Price}}&nbsp &nbsp{{pizza.Large}}</span></h4>
+                                        <p>{{pizza.Description}}</p>
                                     </div>
                                 </div>
                             </div>
@@ -979,8 +937,8 @@
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="single_menu_list">
-                                    <img src="http://infinityflamesoft.com/html/restarunt-preview/assets/img/menu/menu-2.jpg" alt="">
-                                    <div class="menu_content" ng-repeat="speciality in specialities">
+                                    <img ng-src="{{speciality.image}}" alt="">
+                                    <div class="menu_content" ng-repeat="speciality in specialities"ng-hide="$odd">
                                         <h4>{{speciality.Name}}  <span>{{speciality.Price}}</span></h4>
                                         <p>{{speciality.Description}}</p>
                                     </div>
@@ -988,24 +946,10 @@
                             </div>
                             <div class="col-md-6">
                                 <div class="single_menu_list">
-                                    <img src="http://infinityflamesoft.com/html/restarunt-preview/assets/img/menu/menu-5.jpg" alt="">
-                                    <div class="menu_content">
-                                        <h4>Chicken Fried Salad  <span>$45</span></h4>
-                                        <p>Aperiam tempore sit,perferendis numquam repudiandae porro voluptate dicta saepe facilis.</p>
-                                    </div>
-                                </div>
-                                <div class="single_menu_list">
-                                    <img src="http://infinityflamesoft.com/html/restarunt-preview/assets/img/menu/menu-3.jpg" alt="">
-                                    <div class="menu_content">
-                                        <h4>Chicken Fried Salad  <span>$45</span></h4>
-                                        <p>Aperiam tempore sit,perferendis numquam repudiandae porro voluptate dicta saepe facilis.</p>
-                                    </div>
-                                </div>
-                                <div class="single_menu_list">
-                                    <img src="http://infinityflamesoft.com/html/restarunt-preview/assets/img/menu/menu-4.jpg" alt="">
-                                    <div class="menu_content">
-                                        <h4>Chicken Fried Salad  <span>$45</span></h4>
-                                        <p>Aperiam tempore sit,perferendis numquam repudiandae porro voluptate dicta saepe facilis.</p>
+                                    <img ng-src="{{speciality.image}}" alt="">
+                                    <div class="menu_content" ng-repeat="speciality in specialities"ng-hide="$even">
+                                        <h4>{{speciality.Name}}  <span>{{speciality.Price}}</span></h4>
+                                        <p>{{speciality.Description}}</p>
                                     </div>
                                 </div>
                             </div>
@@ -1016,7 +960,7 @@
                             <div class="col-md-6">
                                 <div class="single_menu_list">
                                     <img src="http://infinityflamesoft.com/html/restarunt-preview/assets/img/menu/menu-2.jpg" alt="">
-                                    <div class="menu_content" ng-repeat="pasta in pastas">
+                                    <div class="menu_content" ng-repeat="pasta in pastas"ng-hide="$odd">
                                         <h4>{{pasta.Name}}  <span>{{pasta.Price}}</span></h4>
                                         <p>{{pasta.Description}}</p>
                                     </div>
@@ -1024,24 +968,32 @@
                             </div>
                             <div class="col-md-6">
                                 <div class="single_menu_list">
-                                    <img src="http://infinityflamesoft.com/html/restarunt-preview/assets/img/menu/menu-5.jpg" alt="">
-                                    <div class="menu_content">
-                                        <h4>Chicken Fried Salad  <span>$45</span></h4>
-                                        <p>Aperiam tempore sit,perferendis numquam repudiandae porro voluptate dicta saepe facilis.</p>
+                                    <img src="http://infinityflamesoft.com/html/restarunt-preview/assets/img/menu/menu-2.jpg" alt="">
+                                    <div class="menu_content" ng-repeat="pasta in pastas"ng-hide="$even">
+                                        <h4>{{pasta.Name}}  <span>{{pasta.Price}}</span></h4>
+                                        <p>{{pasta.Description}}</p>
                                     </div>
                                 </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="entrees" role="tabpanel" aria-labelledby="entrees-tab">
+                        <div class="row">
+                            <div class="col-md-6">
                                 <div class="single_menu_list">
-                                    <img src="http://infinityflamesoft.com/html/restarunt-preview/assets/img/menu/menu-3.jpg" alt="">
-                                    <div class="menu_content">
-                                        <h4>Chicken Fried Salad  <span>$45</span></h4>
-                                        <p>Aperiam tempore sit,perferendis numquam repudiandae porro voluptate dicta saepe facilis.</p>
+                                    <img src="http://infinityflamesoft.com/html/restarunt-preview/assets/img/menu/menu-2.jpg" alt="">
+                                    <div class="menu_content" ng-repeat="entree in entrees"ng-hide="$odd">
+                                        <h4>{{entree.Name}}  <span>{{entree.Price}}</span></h4>
+                                        <p>{{entree.Description}}</p>
                                     </div>
                                 </div>
+                            </div>
+                            <div class="col-md-6">
                                 <div class="single_menu_list">
-                                    <img src="http://infinityflamesoft.com/html/restarunt-preview/assets/img/menu/menu-4.jpg" alt="">
-                                    <div class="menu_content">
-                                        <h4>Chicken Fried Salad  <span>$45</span></h4>
-                                        <p>Aperiam tempore sit,perferendis numquam repudiandae porro voluptate dicta saepe facilis.</p>
+                                    <img src="http://infinityflamesoft.com/html/restarunt-preview/assets/img/menu/menu-2.jpg" alt="">
+                                    <div class="menu_content" ng-repeat="entree in entrees"ng-hide="$even">
+                                        <h4>{{entree.Name}}  <span>{{entree.Price}}</span></h4>
+                                        <p>{{entree.Description}}</p>
                                     </div>
                                 </div>
                             </div>
@@ -1052,30 +1004,20 @@
                             <div class="col-md-6">
                                 <div class="single_menu_list">
                                     <img src="http://infinityflamesoft.com/html/restarunt-preview/assets/img/menu/menu-2.jpg" alt="">
-                                    <div class="menu_content" ng-repeat="bakedpasta in baked">
+                                    <div class="menu_content" ng-repeat="bakedpasta in baked" ng-hide="$odd">
                                         <h4>{{bakedpasta.Name}}  <span>{{bakedpasta.Price}}</span></h4>
                                         <p>{{bakedpasta.Description}}</p>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-md-6">
-
-                            </div>
-                        </div>
-                    </div>
-                    <div class="tab-pane fade" id="entrees" role="tabpanel" aria-labelledby="entrees-tab">
-                        <div class="row">
-                            <div class="col-md-6">
                                 <div class="single_menu_list">
                                     <img src="http://infinityflamesoft.com/html/restarunt-preview/assets/img/menu/menu-2.jpg" alt="">
-                                    <div class="menu_content" ng-repeat="entree in entrees">
-                                        <h4>{{entree.Name}}  <span>{{entree.Price}}</span></h4>
-                                        <p>{{entree.Description}}</p>
+                                    <div class="menu_content" ng-repeat="bakedpasta in baked" ng-hide="$even">
+                                        <h4>{{bakedpasta.Name}}  <span>{{bakedpasta.Price}}</span></h4>
+                                        <p>{{bakedpasta.Description}}</p>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="col-md-6">
-
                             </div>
                         </div>
                     </div>
@@ -1084,14 +1026,20 @@
                             <div class="col-md-6">
                                 <div class="single_menu_list">
                                     <img src="http://infinityflamesoft.com/html/restarunt-preview/assets/img/menu/menu-2.jpg" alt="">
-                                    <div class="menu_content" ng-repeat="seafood in seafoods">
+                                    <div class="menu_content" ng-repeat="seafood in seafoods" ng-hide="$odd">
                                         <h4>{{seafood.Name}}  <span>{{seafood.Price}}</span></h4>
                                         <p>{{seafood.Description}}</p>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-md-6">
-
+                                <div class="single_menu_list">
+                                    <img src="http://infinityflamesoft.com/html/restarunt-preview/assets/img/menu/menu-2.jpg" alt="">
+                                    <div class="menu_content" ng-repeat="seafood in seafoods" ng-hide="$even">
+                                        <h4>{{seafood.Name}}  <span>{{seafood.Price}}</span></h4>
+                                        <p>{{seafood.Description}}</p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -1100,14 +1048,20 @@
                             <div class="col-md-6">
                                 <div class="single_menu_list">
                                     <img src="http://infinityflamesoft.com/html/restarunt-preview/assets/img/menu/menu-2.jpg" alt="">
-                                    <div class="menu_content" ng-repeat="specialitysub in specialitysubs">
+                                    <div class="menu_content" ng-repeat="specialitysub in specialitysubs" ng-hide="$odd">
                                         <h4>{{specialitysub.Name}}  <span>{{specialitysub.Price}}&nbsp &nbsp{{specialitysub.Large}}</span></h4>
                                         <p>{{specialitysub.Description}}</p>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-md-6">
-
+                                <div class="single_menu_list">
+                                    <img src="http://infinityflamesoft.com/html/restarunt-preview/assets/img/menu/menu-2.jpg" alt="">
+                                    <div class="menu_content" ng-repeat="specialitysub in specialitysubs" ng-hide="$even">
+                                        <h4>{{specialitysub.Name}}  <span>{{specialitysub.Price}}&nbsp &nbsp{{specialitysub.Large}}</span></h4>
+                                        <p>{{specialitysub.Description}}</p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -1116,14 +1070,20 @@
                             <div class="col-md-6">
                                 <div class="single_menu_list">
                                     <img src="http://infinityflamesoft.com/html/restarunt-preview/assets/img/menu/menu-2.jpg" alt="">
-                                    <div class="menu_content" ng-repeat="soup in soups">
+                                    <div class="menu_content" ng-repeat="soup in soups" ng-hide="$odd">
                                         <h4>{{soup.Name}}  <span>{{soup.Price}}&nbsp &nbsp{{soup.Large}}</span></h4>
                                         <p>{{soup.Description}}</p>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-md-6">
-
+                                <div class="single_menu_list">
+                                    <img src="http://infinityflamesoft.com/html/restarunt-preview/assets/img/menu/menu-2.jpg" alt="">
+                                    <div class="menu_content" ng-repeat="soup in soups" ng-hide="$even">
+                                        <h4>{{soup.Name}}  <span>{{soup.Price}}&nbsp &nbsp{{soup.Large}}</span></h4>
+                                        <p>{{soup.Description}}</p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -1132,14 +1092,20 @@
                             <div class="col-md-6">
                                 <div class="single_menu_list">
                                     <img src="http://infinityflamesoft.com/html/restarunt-preview/assets/img/menu/menu-2.jpg" alt="">
-                                    <div class="menu_content" ng-repeat="wrap in wraps">
+                                    <div class="menu_content" ng-repeat="wrap in wraps" ng-hide="$odd">
                                         <h4>{{wrap.Name}}  <span>{{wrap.Price}}</span></h4>
                                         <p>{{wrap.Description}}</p>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-md-6">
-
+                                <div class="single_menu_list">
+                                    <img src="http://infinityflamesoft.com/html/restarunt-preview/assets/img/menu/menu-2.jpg" alt="">
+                                    <div class="menu_content" ng-repeat="wrap in wraps" ng-hide="$even">
+                                        <h4>{{wrap.Name}}  <span>{{wrap.Price}}</span></h4>
+                                        <p>{{wrap.Description}}</p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -1148,14 +1114,20 @@
                             <div class="col-md-6">
                                 <div class="single_menu_list">
                                     <img src="http://infinityflamesoft.com/html/restarunt-preview/assets/img/menu/menu-2.jpg" alt="">
-                                    <div class="menu_content" ng-repeat="panini in paninis">
+                                    <div class="menu_content" ng-repeat="panini in paninis" ng-hide="$odd">
                                         <h4>{{panini.Name}}  <span>{{panini.Price}}</span></h4>
                                         <p>{{panini.Description}}</p>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-md-6">
-
+                                <div class="single_menu_list">
+                                    <img src="http://infinityflamesoft.com/html/restarunt-preview/assets/img/menu/menu-2.jpg" alt="">
+                                    <div class="menu_content" ng-repeat="panini in paninis" ng-hide="$even">
+                                        <h4>{{panini.Name}}  <span>{{panini.Price}}</span></h4>
+                                        <p>{{panini.Description}}</p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -1164,14 +1136,20 @@
                             <div class="col-md-6">
                                 <div class="single_menu_list">
                                     <img src="http://infinityflamesoft.com/html/restarunt-preview/assets/img/menu/menu-2.jpg" alt="">
-                                    <div class="menu_content" ng-repeat="side in sides">
+                                    <div class="menu_content" ng-repeat="side in sides" ng-hide="$odd">
                                         <h4>{{side.Name}}  <span>{{side.Price}}</span></h4>
                                         <p>{{side.Description}}</p>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-md-6">
-
+                                <div class="single_menu_list">
+                                    <img src="http://infinityflamesoft.com/html/restarunt-preview/assets/img/menu/menu-2.jpg" alt="">
+                                    <div class="menu_content" ng-repeat="side in sides" ng-hide="$even">
+                                        <h4>{{side.Name}}  <span>{{side.Price}}</span></h4>
+                                        <p>{{side.Description}}</p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -1180,14 +1158,20 @@
                             <div class="col-md-6">
                                 <div class="single_menu_list">
                                     <img src="http://infinityflamesoft.com/html/restarunt-preview/assets/img/menu/menu-2.jpg" alt="">
-                                    <div class="menu_content" ng-repeat="burger in burgers">
+                                    <div class="menu_content" ng-repeat="burger in burgers"ng-hide="$odd">
                                         <h4>{{burger.Name}}  <span>{{burger.Price}}</span></h4>
                                         <p>{{burger.Description}}</p>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-md-6">
-
+                                <div class="single_menu_list">
+                                    <img src="http://infinityflamesoft.com/html/restarunt-preview/assets/img/menu/menu-2.jpg" alt="">
+                                    <div class="menu_content" ng-repeat="burger in burgers"ng-hide="$even">
+                                        <h4>{{burger.Name}}  <span>{{burger.Price}}</span></h4>
+                                        <p>{{burger.Description}}</p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -1196,13 +1180,21 @@
                             <div class="col-md-6">
                                 <div class="single_menu_list">
                                     <img src="http://infinityflamesoft.com/html/restarunt-preview/assets/img/menu/menu-2.jpg" alt="">
-                                    <div class="menu_content" ng-repeat="hotsub in hotsubs">
+                                    <div class="menu_content" ng-repeat="hotsub in hotsubs" ng-hide="$odd">
                                         <h4>{{hotsub.Name}}  <span>{{hotsub.Price}}&nbsp &nbsp{{hotsub.Large}}</span></h4>
                                         <p>{{hotsub.Description}}</p>
                                     </div>
                                 </div>
                             </div>
-
+                            <div class="col-md-6">
+                                <div class="single_menu_list">
+                                    <img src="http://infinityflamesoft.com/html/restarunt-preview/assets/img/menu/menu-2.jpg" alt="">
+                                    <div class="menu_content" ng-repeat="hotsub in hotsubs" ng-hide="$even">
+                                        <h4>{{hotsub.Name}}  <span>{{hotsub.Price}}&nbsp &nbsp{{hotsub.Large}}</span></h4>
+                                        <p>{{hotsub.Description}}</p>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div class="tab-pane fade" id="cold" role="tabpanel" aria-labelledby="cold-tab">
@@ -1210,7 +1202,16 @@
                             <div class="col-md-6">
                                 <div class="single_menu_list">
                                     <img src="http://infinityflamesoft.com/html/restarunt-preview/assets/img/menu/menu-2.jpg" alt="">
-                                    <div class="menu_content" ng-repeat="coldsub in coldsubs">
+                                    <div class="menu_content" ng-repeat="coldsub in coldsubs" ng-hide="$odd">
+                                        <h4>{{coldsub.Name}}  <span>{{coldsub.Price}}&nbsp &nbsp{{coldsub.Large}}</span></h4>
+                                        <p>{{coldsub.Description}}</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="single_menu_list">
+                                    <img src="http://infinityflamesoft.com/html/restarunt-preview/assets/img/menu/menu-2.jpg" alt="">
+                                    <div class="menu_content" ng-repeat="coldsub in coldsubs" ng-hide="$even">
                                         <h4>{{coldsub.Name}}  <span>{{coldsub.Price}}&nbsp &nbsp{{coldsub.Large}}</span></h4>
                                         <p>{{coldsub.Description}}</p>
                                     </div>
@@ -1335,7 +1336,7 @@
                             <div class="col-md-6">
                                 <div class="single_menu_list">
                                     <img src="http://infinityflamesoft.com/html/restarunt-preview/assets/img/menu/menu-5.jpg" alt="">
-                                    <div class="menu_content" ng-repeat="pollo in pollos">
+                                    <div class="menu_content" ng-repeat="pollo in pollos" ng-hide="$odd">
                                         <h4>{{pollo.Name}}  <span>{{pollo.half}}&nbsp &nbsp{{pollo.full}}</span></h4>
                                         <p>{{pollo.Description}}</p>
                                     </div>
@@ -1343,24 +1344,10 @@
                             </div>
                             <div class="col-md-6">
                                 <div class="single_menu_list">
-                                    <img src="http://infinityflamesoft.com/html/restarunt-preview/assets/img/menu/menu-4.jpg" alt="">
-                                    <div class="menu_content">
-                                        <h4>Chicken Fried Salad  <span>$45</span></h4>
-                                        <p>Aperiam tempore sit,perferendis numquam repudiandae porro voluptate dicta saepe facilis.</p>
-                                    </div>
-                                </div>
-                                <div class="single_menu_list">
                                     <img src="http://infinityflamesoft.com/html/restarunt-preview/assets/img/menu/menu-5.jpg" alt="">
-                                    <div class="menu_content">
-                                        <h4>Chicken Fried Salad  <span>$45</span></h4>
-                                        <p>Aperiam tempore sit,perferendis numquam repudiandae porro voluptate dicta saepe facilis.</p>
-                                    </div>
-                                </div>
-                                <div class="single_menu_list">
-                                    <img src="http://infinityflamesoft.com/html/restarunt-preview/assets/img/menu/menu-6.jpg" alt="">
-                                    <div class="menu_content">
-                                        <h4>Chicken Fried Salad  <span>$45</span></h4>
-                                        <p>Aperiam tempore sit,perferendis numquam repudiandae porro voluptate dicta saepe facilis.</p>
+                                    <div class="menu_content" ng-repeat="pollo in pollos" ng-hide="$even">
+                                        <h4>{{pollo.Name}}  <span>{{pollo.half}}&nbsp &nbsp{{pollo.full}}</span></h4>
+                                        <p>{{pollo.Description}}</p>
                                     </div>
                                 </div>
                             </div>
@@ -1371,7 +1358,7 @@
                             <div class="col-md-6">
                                 <div class="single_menu_list">
                                     <img src="http://infinityflamesoft.com/html/restarunt-preview/assets/img/menu/menu-2.jpg" alt="">
-                                    <div class="menu_content" ng-repeat="sea in seas">
+                                    <div class="menu_content" ng-repeat="sea in seas" ng-hide="$odd">
                                         <h4>{{sea.Name}}  <span>{{sea.half}}&nbsp &nbsp{{sea.full}}</span></h4>
                                         <p>{{sea.Description}}</p>
                                     </div>
@@ -1379,24 +1366,10 @@
                             </div>
                             <div class="col-md-6">
                                 <div class="single_menu_list">
-                                    <img src="http://infinityflamesoft.com/html/restarunt-preview/assets/img/menu/menu-5.jpg" alt="">
-                                    <div class="menu_content">
-                                        <h4>Chicken Fried Salad  <span>$45</span></h4>
-                                        <p>Aperiam tempore sit,perferendis numquam repudiandae porro voluptate dicta saepe facilis.</p>
-                                    </div>
-                                </div>
-                                <div class="single_menu_list">
-                                    <img src="http://infinityflamesoft.com/html/restarunt-preview/assets/img/menu/menu-3.jpg" alt="">
-                                    <div class="menu_content">
-                                        <h4>Chicken Fried Salad  <span>$45</span></h4>
-                                        <p>Aperiam tempore sit,perferendis numquam repudiandae porro voluptate dicta saepe facilis.</p>
-                                    </div>
-                                </div>
-                                <div class="single_menu_list">
-                                    <img src="http://infinityflamesoft.com/html/restarunt-preview/assets/img/menu/menu-4.jpg" alt="">
-                                    <div class="menu_content">
-                                        <h4>Chicken Fried Salad  <span>$45</span></h4>
-                                        <p>Aperiam tempore sit,perferendis numquam repudiandae porro voluptate dicta saepe facilis.</p>
+                                    <img src="http://infinityflamesoft.com/html/restarunt-preview/assets/img/menu/menu-2.jpg" alt="">
+                                    <div class="menu_content" ng-repeat="sea in seas" ng-hide="$even">
+                                        <h4>{{sea.Name}}  <span>{{sea.half}}&nbsp &nbsp{{sea.full}}</span></h4>
+                                        <p>{{sea.Description}}</p>
                                     </div>
                                 </div>
                             </div>
@@ -1407,7 +1380,7 @@
                             <div class="col-md-6">
                                 <div class="single_menu_list">
                                     <img src="http://infinityflamesoft.com/html/restarunt-preview/assets/img/menu/menu-2.jpg" alt="">
-                                    <div class="menu_content" ng-repeat="pastabake in pastabakes">
+                                    <div class="menu_content" ng-repeat="pastabake in pastabakes" ng-hide="$odd">
                                         <h4>{{pastabake.Name}}  <span>{{pastabake.half}}&nbsp &nbsp{{pastabake.full}}</span></h4>
                                         <p>{{pastabake.Description}}</p>
                                     </div>
@@ -1415,24 +1388,10 @@
                             </div>
                             <div class="col-md-6">
                                 <div class="single_menu_list">
-                                    <img src="http://infinityflamesoft.com/html/restarunt-preview/assets/img/menu/menu-5.jpg" alt="">
-                                    <div class="menu_content">
-                                        <h4>Chicken Fried Salad  <span>$45</span></h4>
-                                        <p>Aperiam tempore sit,perferendis numquam repudiandae porro voluptate dicta saepe facilis.</p>
-                                    </div>
-                                </div>
-                                <div class="single_menu_list">
-                                    <img src="http://infinityflamesoft.com/html/restarunt-preview/assets/img/menu/menu-3.jpg" alt="">
-                                    <div class="menu_content">
-                                        <h4>Chicken Fried Salad  <span>$45</span></h4>
-                                        <p>Aperiam tempore sit,perferendis numquam repudiandae porro voluptate dicta saepe facilis.</p>
-                                    </div>
-                                </div>
-                                <div class="single_menu_list">
-                                    <img src="http://infinityflamesoft.com/html/restarunt-preview/assets/img/menu/menu-4.jpg" alt="">
-                                    <div class="menu_content">
-                                        <h4>Chicken Fried Salad  <span>$45</span></h4>
-                                        <p>Aperiam tempore sit,perferendis numquam repudiandae porro voluptate dicta saepe facilis.</p>
+                                    <img src="http://infinityflamesoft.com/html/restarunt-preview/assets/img/menu/menu-2.jpg" alt="">
+                                    <div class="menu_content" ng-repeat="pastabake in pastabakes" ng-hide="$even">
+                                        <h4>{{pastabake.Name}}  <span>{{pastabake.half}}&nbsp &nbsp{{pastabake.full}}</span></h4>
+                                        <p>{{pastabake.Description}}</p>
                                     </div>
                                 </div>
                             </div>
@@ -1673,6 +1632,7 @@
                     $scope.pollos = response.data.pollo;
                     $scope.seas = response.data.sea;
                     $scope.pastabakes = response.data.pastabake;
+                    $scope.images = response.data.image;
                 });
         });
     </script>
