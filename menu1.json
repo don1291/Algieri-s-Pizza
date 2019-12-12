@@ -207,6 +207,7 @@
       "id": "34",
       "Name": "Artichoke",
       "Description": "",
+      "image": "images/artichoke.jpg",
       "Price": "$13.50"
     },
     {
@@ -326,7 +327,7 @@
     {
       "id": "53",
       "Name": "Mini Sicillian",
-      "Description": "",
+      "Description": "Toppings $1.00",
       "Price": "$9.95"
     },
     {
@@ -345,6 +346,7 @@
       "id": "56",
       "Name": "Margherita Pizza",
       "Description": "Fresh mozzarella, fresh basil, sprinkled with grated cheese.",
+      "image": "images/margherita.jpg",
       "Price": "$14.95"
     },
     {
@@ -359,7 +361,8 @@
       "id": "58",
       "Name": "Buffalo Chicken Strips ",
       "Description": "",
-      "Price": "$9.95"
+      "Price": "$9.95",
+      "image":""
     },
     {
       "id": "59",
@@ -988,8 +991,9 @@
     {
       "id": "149",
       "Name": "Broccoli Rage",
-      "Description": "",
-      "Price": "$13.95"
+      "Description": "With Sausage, Chicken or Shrimp ",
+      "Price": "$13.95",
+      "Large": "14.95"
     },
     {
       "id": "150",
@@ -1281,6 +1285,166 @@
       "Description": "",
       "Price": "$8.95",
       "Large": "$11.95"
+    }
+  ],
+  "pollo": [
+    {
+      "id": "196",
+      "Name": "Francese",
+      "Description": "With egg-battered chicken and sauteed mushrooms in a lemon based white wine sauce",
+      "half": "$45.00",
+      "full": "$85.00"
+    },
+    {
+      "id": "197",
+      "Name": "Giambotta",
+      "Description": "With sauteed mushrooms, peppers, potatoes and sausage in a white wine sauce",
+      "half": "$50.00",
+      "full": "$90.00"
+    },
+    {
+      "id": "198",
+      "Name": "Marsala",
+      "Description": "With sauteed mushrooms and onions in a brown marsala sauce",
+      "half": "$45.00",
+      "full": "$85.00"
+    },
+    {
+      "id": "199",
+      "Name": "Murphy",
+      "Description": "(Hot/Sweet) With sauteed mushrooms, peppers and potatoes in a white wine sauce",
+      "half": "$45.00",
+      "full": "$85.00"
+    },
+    {
+      "id": "200",
+      "Name": "Parmigiana",
+      "Description": "With breaded chicken cutlets topped off with homemade tomato sauce and melted mozzarella",
+      "half": "$45.00",
+      "full": "$85.00"
+    },
+    {
+      "id": "201",
+      "Name": "Savoy",
+      "Description": "With sauteed mushrooms and peppers in a white wine balsamic sauce",
+      "half": "$45.00",
+      "full": "$85.00"
+    },
+    {
+      "id": "202",
+      "Name": "Saltimbocca",
+      "Description": "With sauteed mushrooms and onions topped off with prosciutto and melted mozzarella in a brown marsala sauce",
+      "half": "$50.00",
+      "full": "$90.00"
+    }
+  ],
+  "sea": [
+    {
+      "id": "203",
+      "Name": "Fried Calamari",
+      "Description": "Served with your choice of hot,mild,sweet red sauce",
+      "half": "$45.00",
+      "full": "$75.00"
+    },
+    {
+      "id": "204",
+      "Name": "Shrimp Parmigiana",
+      "Description": "Breaded shrimp topped with homemade tomato sauce and melted mozzarella",
+      "half": "$60.00",
+      "full": "$105.00"
+    },
+    {
+      "id": "205",
+      "Name": "Shrimp Fra'diavolo",
+      "Description": "Sauteed Shrimp in a mix of our homemade marinara sauce and white wine with crushed hot peppers. Also available sweet.",
+      "half": "$55.00",
+      "full": "$100.00"
+    },
+    {
+      "id": "206",
+      "Name": "Fried Fish Fillet",
+      "Description": "Fish fried to a golden brown, served with tarter sauce",
+      "half": "$40.00",
+      "full": "$70.00"
+    },
+    {
+      "id": "207",
+      "Name": "Seafood Salad",
+      "Description": "Cooked Calamari, Mussels, and Shrimp mixed together with celery and roasted peppers served in our garlic olive oil lemon sauce",
+      "half": "$40.00",
+      "full": "$70.00"
+    },
+    {
+      "id": "208",
+      "Name": "Fried Shrimp",
+      "Description": "",
+      "half": "$55.00",
+      "full": "$100.00"
+    },
+    {
+      "id": "209",
+      "Name": "Mussels(Red or White)",
+      "Description": "Mussels cooked in homemade marinara sauce, or in white wine, butter and garlic sauce",
+      "half": "$55.00",
+      "full": "$100.00"
+    }
+  ],
+  "pastabake": [
+    {
+      "id": "210",
+      "Name": "Baked Ziti",
+      "Description": "Penne with our homemade sauce, ricotta and melted mozzarella",
+      "half": "$35.00",
+      "full": "$70.00"
+    },
+    {
+      "id": "211",
+      "Name": "Penne alla Vodka",
+      "Description": "With prosciutto and onions in a pink creamy vodka sauce",
+      "half": "$40.00",
+      "full": "$75.00"
+    },
+    {
+      "id": "212",
+      "Name": "Cavatelli and Broccoli",
+      "Description": "With sauteed Broccoli in a rich butter and garlic white wine sauce",
+      "half": "$35.00",
+      "full": "$70.00"
+    },
+    {
+      "id": "213",
+      "Name": "Eggplant Parmigiana",
+      "Description": "Breaded eggplant cutlets in our homemade tomato sauce topped with melted mozzarella",
+      "half": "$45.00",
+      "full": "$85.00"
+    },
+    {
+      "id": "214",
+      "Name": "Eggplant Rollatini",
+      "Description": "Breaded eggplant cutlets stuffed with ricotta and ham, topped with tomato sauce and melted mozzarella",
+      "half": "$50.00",
+      "full": "$85.00"
+    },
+    {
+      "id": "215",
+      "Name": "Sausage & Peppers",
+      "Description": "Sausage and peppers sauteed together in our homemade tomato sauce",
+      "half": "$45.00",
+      "full": "$85.00"
+    },
+    {
+      "id": "216",
+      "Name": "Sausage Giambotta",
+      "Description": "Sausage,peppers,onions and potatoes all sauteed together in a rich white wine sauce",
+      "half": "$50.00",
+      "full": "$90.00"
+    },
+    {
+      "id": "217",
+      "Name": "Hot Roast Beef",
+      "Description": "Sliced roast beef served in a brown gravy sauce",
+      "half": "$50.00",
+      "full": "$90.00"
     }
   ]
 }
