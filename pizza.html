@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -521,76 +520,15 @@
             color: #fff;
             background: #222;
         }
-        
-        img::selection {
+        /* img::selection {
             color: #fff;
             background: 0 0;
         }
-        
+
         img::-moz-selection {
             color: #fff;
             background: 0 0;
-        }
-        
-        .shopping-cart {
-            margin: 20px 0;
-            float: right;
-            background: white;
-            width: 320px;
-            position: relative;
-            border-radius: 3px;
-            padding: 20px;
-            .shopping-cart-header {
-                border-bottom: 1px solid #E8E8E8;
-                padding-bottom: 15px;
-                .shopping-cart-total {
-                    float: right;
-                }
-            }
-            .shopping-cart-items {
-                padding-top: 20px;
-                li {
-                    margin-bottom: 18px;
-                }
-                img {
-                    float: left;
-                    margin-right: 12px;
-                }
-                .item-name {
-                    display: block;
-                    padding-top: 10px;
-                    font-size: 16px;
-                }
-                .item-price {
-                    color: $main-color;
-                    margin-right: 8px;
-                }
-                .item-quantity {
-                    color: $light-text;
-                }
-            }
-        }
-        
-        .shopping-cart:after {
-            bottom: 100%;
-            left: 89%;
-            border: solid transparent;
-            content: " ";
-            height: 0;
-            width: 0;
-            position: absolute;
-            pointer-events: none;
-            border-bottom-color: white;
-            border-width: 8px;
-            margin-left: -8px;
-        }
-        
-        .cart-icon {
-            color: #515783;
-            font-size: 24px;
-            margin-right: 7px;
-            float: left;
-        }
+        }*/
         
         .button {
             background: $main-color;
@@ -706,8 +644,74 @@
             color: #FF5E18;
             font-style: italic;
         }
-    </style>
-
+        
+        .openinghours {
+            font-family: Lucida Console;
+            border-radius: 4px;
+            margin: 10px;
+            box-shadow: 0 0 10px black;
+            padding: 0 10px 0 10px;
+            overflow: hidden;
+            display: inline-block;
+        }
+        
+        .openinghourscontent {
+            float: left;
+        }
+        
+        .openinghourscontent h2 {
+            display: block;
+            text-align: center;
+            margin-top: .33em;
+        }
+        
+        .openinghourscontent button {
+            color: white;
+            font-family: Courier New;
+            font-size: large;
+            font-weight: bolder;
+            background-color: #4679BD;
+            border-radius: 4px;
+            width: 100%;
+            margin-bottom: 10px;
+        }
+        
+        .today {
+            color: #8AC007;
+        }
+        
+        .opening-hours-table tr td:first-child {
+            font-weight: bold;
+        }
+        
+        #open-status {
+            display: block;
+            margin-top: -1em;
+            text-align: center;
+            border: dotted lightgrey 3px;
+        }
+        
+        .openorclosed:after {
+            content: " open during these hours:";
+        }
+        
+        .open {
+            color: green;
+        }
+        
+        .open:after {
+            content: " Open";
+            color: #6C0;
+        }
+        
+        .closed:after {
+            content: " Closed";
+            color: red;
+        }
+        
+        .opening-hours-table tr td {
+            padding: 5px;
+        }
     </style>
     <!-- AngularJS -->
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
@@ -753,7 +757,7 @@
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
                     <li>
-                        <a class="page-scroll" data-toggle="modal" title="A free Bootstrap video landing theme" href="#aboutModal">About</a>
+                        <a class="page-scroll" data-toggle="modal" title="A free Bootstrap video landing theme" href="#aboutModal">View Hours</a>
                     </li>
 
                     <!--<li class="dropdown">
@@ -769,7 +773,7 @@
 
                         </ul>
                     </li>-->
-                   <!-- <li>
+                    <!-- <li>
                         <a href="#"><span class="glyphicon glyphicon-shopping-cart"></span><span class="badge" id=
                         "targetEl"value="0">0</span></a>
                     </li>-->
@@ -783,7 +787,7 @@
                 <h1 class="cursive">Algieri's Pizza Restaurant</h1>
                 <h4>502 Union Ave Belleville, NJ</h4>
                 <hr>
-                <a href="#video-background" id="toggleVideo" data-toggle="collapse" class="btn btn-primary btn-xl">Toggle Video</a> &nbsp; <a href="https://slicelife.com/restaurants/nj/belleville/07109/algieri-s-pizza/menu" class="btn btn-primary btn-xl page-scroll">Get Started</a>
+                <a href="#two" data-toggle="collapse" class="page-scroll btn btn-primary btn-xl">View Menu</a> &nbsp; <a href="https://slicelife.com/restaurants/nj/belleville/07109/algieri-s-pizza/menu" class="btn btn-primary btn-xl page-scroll">Get Started</a>
             </div>
         </div>
         <video>
@@ -872,367 +876,405 @@
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="single_menu_list">
-                                    <img src="http://infinityflamesoft.com/html/restarunt-preview/assets/img/menu/menu-5.jpg" alt="">
+                                    <!--<img src="http://infinityflamesoft.com/html/restarunt-preview/assets/img/menu/menu-2.jpg" alt="">-->
                                     <div class="menu_content" ng-repeat="appetizer in appetizers" ng-hide="$odd">
-                                        <h4>{{appetizer.Name}} <span style="cursor:pointer"onclick="location.href='#'">{{appetizer.Large}}</span><span style="cursor:pointer"onclick="location.href='#'">{{appetizer.Price}}&nbsp &nbsp</span></h4>
-                                        <p>{{appetizer.Description}}</p>
+                                        <h4>{{appetizer.Name}} <span style="cursor:pointer"data-toggle="modal" data-target="#myModal"onclick="location.href='#two'">{{appetizer.Large}}</span><span style="cursor:pointer"onclick="location.href='#two'">{{appetizer.Price}}&nbsp &nbsp</span><!-- Modal -->
+<div id="myModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title"ng-repeat="appetizer in appetizers"ng-show="$index === 0">{{ appetizer.Name }}</h4>
+                                        <br>
                                     </div>
+                                    <div class="modal-body">
+                                        <ul>
+                                            <p ng-repeat="appetizer in appetizers">{{ appetizer.Description}}
+                                            </p>
+                                        </ul>
+                                        <br>
+                                        <br>
+                                        <textarea class="form-control" rows="9" name="message" placeholder="Special Instructions or Request.."></textarea>
+                                        <br>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                            <button id="triggerEl" class="btn btn-default" data-dismiss="modal">Add to Cart</button>
+                                        </div>
+                                    </div>
+
                                 </div>
                             </div>
-                            <div class="col-md-6">
-                                <div class="single_menu_list">
-                                    <img src="http://infinityflamesoft.com/html/restarunt-preview/assets/img/menu/menu-5.jpg" alt="">
-                                    <div class="menu_content" ng-repeat="appetizer in appetizers" ng-hide="$even">
-                                        <h4>{{appetizer.Name}} <span>{{appetizer.Price}}&nbsp &nbsp{{appetizer.Large}}</span></h4>
-                                        <p>{{appetizer.Description}}</p>
-                                    </div>
-                                </div>
-                            </div>
+                            </h4>
+                            <p>{{appetizer.Description}}</p>
                         </div>
                     </div>
-                    <div class="tab-pane fade" id="salad" role="tabpanel" aria-labelledby="salad-tab">
-                        <div class="row">
-                            <div class="col-md-6">
-                                <div class="single_menu_list">
-                                    <img src="http://infinityflamesoft.com/html/restarunt-preview/assets/img/menu/menu-2.jpg" alt="">
-                                    <div class="menu_content" ng-repeat="salad in salads"ng-hide="$odd">
-                                        <h4>{{salad.Name}}  <span>{{salad.Price}}&nbsp &nbsp{{salad.Large}}</span></h4>
-                                        <p>{{salad.Description}}</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="single_menu_list">
-                                    <img src="http://infinityflamesoft.com/html/restarunt-preview/assets/img/menu/menu-2.jpg" alt="">
-                                    <div class="menu_content" ng-repeat="salad in salads"ng-hide="$even">
-                                        <h4>{{salad.Name}}  <span>{{salad.Price}}&nbsp &nbsp{{salad.Large}}</span></h4>
-                                        <p>{{salad.Description}}</p>
-                                    </div>
-                                </div>   
-                            </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="single_menu_list">
+                        <!--<img src="http://infinityflamesoft.com/html/restarunt-preview/assets/img/menu/menu-2.jpg" alt="">-->
+                        <div class="menu_content" ng-repeat="appetizer in appetizers" ng-hide="$even">
+                            <h4>{{appetizer.Name}} <span>{{appetizer.Price}}&nbsp &nbsp{{appetizer.Large}}</span></h4>
+                            <p>{{appetizer.Description}}</p>
                         </div>
-                    </div>
-                    <div class="tab-pane fade" id="pizza" role="tabpanel" aria-labelledby="pizza-tab">
-                        <div class="row">
-                            <div class="col-md-6">
-                                <div class="single_menu_list">
-                                    <img src="http://infinityflamesoft.com/html/restarunt-preview/assets/img/menu/menu-2.jpg" alt="">
-                                    <div class="menu_content" ng-repeat="pizza in pizzas" ng-hide="$odd">
-                                        <h4>{{pizza.Name}}  <span>{{pizza.Price}}&nbsp &nbsp{{pizza.Large}}</span></h4>
-                                        <p>{{pizza.Description}}</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="single_menu_list">
-                                    <img src="http://infinityflamesoft.com/html/restarunt-preview/assets/img/menu/menu-2.jpg" alt="">
-                                    <div class="menu_content" ng-repeat="pizza in pizzas" ng-hide="$even">
-                                        <h4>{{pizza.Name}}  <span>{{pizza.Price}}&nbsp &nbsp{{pizza.Large}}</span></h4>
-                                        <p>{{pizza.Description}}</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="tab-pane fade" id="speciality" role="tabpanel" aria-labelledby="speciality-tab">
-                        <div class="row">
-                            <div class="col-md-6">
-                                <div class="single_menu_list">
-                                    <img ng-src="{{speciality.image}}" alt="">
-                                    <div class="menu_content" ng-repeat="speciality in specialities"ng-hide="$odd">
-                                        <h4>{{speciality.Name}}  <span>{{speciality.Price}}</span></h4>
-                                        <p>{{speciality.Description}}</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="single_menu_list">
-                                    <img ng-src="{{speciality.image}}" alt="">
-                                    <div class="menu_content" ng-repeat="speciality in specialities"ng-hide="$even">
-                                        <h4>{{speciality.Name}}  <span>{{speciality.Price}}</span></h4>
-                                        <p>{{speciality.Description}}</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="tab-pane fade" id="pasta" role="tabpanel" aria-labelledby="pasta-tab">
-                        <div class="row">
-                            <div class="col-md-6">
-                                <div class="single_menu_list">
-                                    <img src="http://infinityflamesoft.com/html/restarunt-preview/assets/img/menu/menu-2.jpg" alt="">
-                                    <div class="menu_content" ng-repeat="pasta in pastas"ng-hide="$odd">
-                                        <h4>{{pasta.Name}}  <span>{{pasta.Price}}</span></h4>
-                                        <p>{{pasta.Description}}</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="single_menu_list">
-                                    <img src="http://infinityflamesoft.com/html/restarunt-preview/assets/img/menu/menu-2.jpg" alt="">
-                                    <div class="menu_content" ng-repeat="pasta in pastas"ng-hide="$even">
-                                        <h4>{{pasta.Name}}  <span>{{pasta.Price}}</span></h4>
-                                        <p>{{pasta.Description}}</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="tab-pane fade" id="entrees" role="tabpanel" aria-labelledby="entrees-tab">
-                        <div class="row">
-                            <div class="col-md-6">
-                                <div class="single_menu_list">
-                                    <img src="http://infinityflamesoft.com/html/restarunt-preview/assets/img/menu/menu-2.jpg" alt="">
-                                    <div class="menu_content" ng-repeat="entree in entrees"ng-hide="$odd">
-                                        <h4>{{entree.Name}}  <span>{{entree.Price}}</span></h4>
-                                        <p>{{entree.Description}}</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="single_menu_list">
-                                    <img src="http://infinityflamesoft.com/html/restarunt-preview/assets/img/menu/menu-2.jpg" alt="">
-                                    <div class="menu_content" ng-repeat="entree in entrees"ng-hide="$even">
-                                        <h4>{{entree.Name}}  <span>{{entree.Price}}</span></h4>
-                                        <p>{{entree.Description}}</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="tab-pane fade" id="bakedpasta" role="tabpanel" aria-labelledby="bakedpasta-tab">
-                        <div class="row">
-                            <div class="col-md-6">
-                                <div class="single_menu_list">
-                                    <img src="http://infinityflamesoft.com/html/restarunt-preview/assets/img/menu/menu-2.jpg" alt="">
-                                    <div class="menu_content" ng-repeat="bakedpasta in baked" ng-hide="$odd">
-                                        <h4>{{bakedpasta.Name}}  <span>{{bakedpasta.Price}}</span></h4>
-                                        <p>{{bakedpasta.Description}}</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="single_menu_list">
-                                    <img src="http://infinityflamesoft.com/html/restarunt-preview/assets/img/menu/menu-2.jpg" alt="">
-                                    <div class="menu_content" ng-repeat="bakedpasta in baked" ng-hide="$even">
-                                        <h4>{{bakedpasta.Name}}  <span>{{bakedpasta.Price}}</span></h4>
-                                        <p>{{bakedpasta.Description}}</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="tab-pane fade" id="sea" role="tabpanel" aria-labelledby="sea-tab">
-                        <div class="row">
-                            <div class="col-md-6">
-                                <div class="single_menu_list">
-                                    <img src="http://infinityflamesoft.com/html/restarunt-preview/assets/img/menu/menu-2.jpg" alt="">
-                                    <div class="menu_content" ng-repeat="seafood in seafoods" ng-hide="$odd">
-                                        <h4>{{seafood.Name}}  <span>{{seafood.Price}}</span></h4>
-                                        <p>{{seafood.Description}}</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="single_menu_list">
-                                    <img src="http://infinityflamesoft.com/html/restarunt-preview/assets/img/menu/menu-2.jpg" alt="">
-                                    <div class="menu_content" ng-repeat="seafood in seafoods" ng-hide="$even">
-                                        <h4>{{seafood.Name}}  <span>{{seafood.Price}}</span></h4>
-                                        <p>{{seafood.Description}}</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="tab-pane fade" id="sub" role="tabpanel" aria-labelledby="sub-tab">
-                        <div class="row">
-                            <div class="col-md-6">
-                                <div class="single_menu_list">
-                                    <img src="http://infinityflamesoft.com/html/restarunt-preview/assets/img/menu/menu-2.jpg" alt="">
-                                    <div class="menu_content" ng-repeat="specialitysub in specialitysubs" ng-hide="$odd">
-                                        <h4>{{specialitysub.Name}}  <span>{{specialitysub.Price}}&nbsp &nbsp{{specialitysub.Large}}</span></h4>
-                                        <p>{{specialitysub.Description}}</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="single_menu_list">
-                                    <img src="http://infinityflamesoft.com/html/restarunt-preview/assets/img/menu/menu-2.jpg" alt="">
-                                    <div class="menu_content" ng-repeat="specialitysub in specialitysubs" ng-hide="$even">
-                                        <h4>{{specialitysub.Name}}  <span>{{specialitysub.Price}}&nbsp &nbsp{{specialitysub.Large}}</span></h4>
-                                        <p>{{specialitysub.Description}}</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="tab-pane fade" id="soup" role="tabpanel" aria-labelledby="soup-tab">
-                        <div class="row">
-                            <div class="col-md-6">
-                                <div class="single_menu_list">
-                                    <img src="http://infinityflamesoft.com/html/restarunt-preview/assets/img/menu/menu-2.jpg" alt="">
-                                    <div class="menu_content" ng-repeat="soup in soups" ng-hide="$odd">
-                                        <h4>{{soup.Name}}  <span>{{soup.Price}}&nbsp &nbsp{{soup.Large}}</span></h4>
-                                        <p>{{soup.Description}}</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="single_menu_list">
-                                    <img src="http://infinityflamesoft.com/html/restarunt-preview/assets/img/menu/menu-2.jpg" alt="">
-                                    <div class="menu_content" ng-repeat="soup in soups" ng-hide="$even">
-                                        <h4>{{soup.Name}}  <span>{{soup.Price}}&nbsp &nbsp{{soup.Large}}</span></h4>
-                                        <p>{{soup.Description}}</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="tab-pane fade" id="wrap" role="tabpanel" aria-labelledby="wrap-tab">
-                        <div class="row">
-                            <div class="col-md-6">
-                                <div class="single_menu_list">
-                                    <img src="http://infinityflamesoft.com/html/restarunt-preview/assets/img/menu/menu-2.jpg" alt="">
-                                    <div class="menu_content" ng-repeat="wrap in wraps" ng-hide="$odd">
-                                        <h4>{{wrap.Name}}  <span>{{wrap.Price}}</span></h4>
-                                        <p>{{wrap.Description}}</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="single_menu_list">
-                                    <img src="http://infinityflamesoft.com/html/restarunt-preview/assets/img/menu/menu-2.jpg" alt="">
-                                    <div class="menu_content" ng-repeat="wrap in wraps" ng-hide="$even">
-                                        <h4>{{wrap.Name}}  <span>{{wrap.Price}}</span></h4>
-                                        <p>{{wrap.Description}}</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="tab-pane fade" id="panini" role="tabpanel" aria-labelledby="panini-tab">
-                        <div class="row">
-                            <div class="col-md-6">
-                                <div class="single_menu_list">
-                                    <img src="http://infinityflamesoft.com/html/restarunt-preview/assets/img/menu/menu-2.jpg" alt="">
-                                    <div class="menu_content" ng-repeat="panini in paninis" ng-hide="$odd">
-                                        <h4>{{panini.Name}}  <span>{{panini.Price}}</span></h4>
-                                        <p>{{panini.Description}}</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="single_menu_list">
-                                    <img src="http://infinityflamesoft.com/html/restarunt-preview/assets/img/menu/menu-2.jpg" alt="">
-                                    <div class="menu_content" ng-repeat="panini in paninis" ng-hide="$even">
-                                        <h4>{{panini.Name}}  <span>{{panini.Price}}</span></h4>
-                                        <p>{{panini.Description}}</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="tab-pane fade" id="side" role="tabpanel" aria-labelledby="side-tab">
-                        <div class="row">
-                            <div class="col-md-6">
-                                <div class="single_menu_list">
-                                    <img src="http://infinityflamesoft.com/html/restarunt-preview/assets/img/menu/menu-2.jpg" alt="">
-                                    <div class="menu_content" ng-repeat="side in sides" ng-hide="$odd">
-                                        <h4>{{side.Name}}  <span>{{side.Price}}</span></h4>
-                                        <p>{{side.Description}}</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="single_menu_list">
-                                    <img src="http://infinityflamesoft.com/html/restarunt-preview/assets/img/menu/menu-2.jpg" alt="">
-                                    <div class="menu_content" ng-repeat="side in sides" ng-hide="$even">
-                                        <h4>{{side.Name}}  <span>{{side.Price}}</span></h4>
-                                        <p>{{side.Description}}</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="tab-pane fade" id="burger" role="tabpanel" aria-labelledby="burger-tab">
-                        <div class="row">
-                            <div class="col-md-6">
-                                <div class="single_menu_list">
-                                    <img src="http://infinityflamesoft.com/html/restarunt-preview/assets/img/menu/menu-2.jpg" alt="">
-                                    <div class="menu_content" ng-repeat="burger in burgers"ng-hide="$odd">
-                                        <h4>{{burger.Name}}  <span>{{burger.Price}}</span></h4>
-                                        <p>{{burger.Description}}</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="single_menu_list">
-                                    <img src="http://infinityflamesoft.com/html/restarunt-preview/assets/img/menu/menu-2.jpg" alt="">
-                                    <div class="menu_content" ng-repeat="burger in burgers"ng-hide="$even">
-                                        <h4>{{burger.Name}}  <span>{{burger.Price}}</span></h4>
-                                        <p>{{burger.Description}}</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="tab-pane fade" id="hot" role="tabpanel" aria-labelledby="hot-tab">
-                        <div class="row">
-                            <div class="col-md-6">
-                                <div class="single_menu_list">
-                                    <img src="http://infinityflamesoft.com/html/restarunt-preview/assets/img/menu/menu-2.jpg" alt="">
-                                    <div class="menu_content" ng-repeat="hotsub in hotsubs" ng-hide="$odd">
-                                        <h4>{{hotsub.Name}}  <span>{{hotsub.Price}}&nbsp &nbsp{{hotsub.Large}}</span></h4>
-                                        <p>{{hotsub.Description}}</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="single_menu_list">
-                                    <img src="http://infinityflamesoft.com/html/restarunt-preview/assets/img/menu/menu-2.jpg" alt="">
-                                    <div class="menu_content" ng-repeat="hotsub in hotsubs" ng-hide="$even">
-                                        <h4>{{hotsub.Name}}  <span>{{hotsub.Price}}&nbsp &nbsp{{hotsub.Large}}</span></h4>
-                                        <p>{{hotsub.Description}}</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="tab-pane fade" id="cold" role="tabpanel" aria-labelledby="cold-tab">
-                        <div class="row">
-                            <div class="col-md-6">
-                                <div class="single_menu_list">
-                                    <img src="http://infinityflamesoft.com/html/restarunt-preview/assets/img/menu/menu-2.jpg" alt="">
-                                    <div class="menu_content" ng-repeat="coldsub in coldsubs" ng-hide="$odd">
-                                        <h4>{{coldsub.Name}}  <span>{{coldsub.Price}}&nbsp &nbsp{{coldsub.Large}}</span></h4>
-                                        <p>{{coldsub.Description}}</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="single_menu_list">
-                                    <img src="http://infinityflamesoft.com/html/restarunt-preview/assets/img/menu/menu-2.jpg" alt="">
-                                    <div class="menu_content" ng-repeat="coldsub in coldsubs" ng-hide="$even">
-                                        <h4>{{coldsub.Name}}  <span>{{coldsub.Price}}&nbsp &nbsp{{coldsub.Large}}</span></h4>
-                                        <p>{{coldsub.Description}}</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-            <div class="row">
-                <div class="col-xl-12 text-center">
-                    <div class="box_btn">
-                        <a href="#">View More</a>
                     </div>
                 </div>
             </div>
         </div>
+        <div class="tab-pane fade" id="salad" role="tabpanel" aria-labelledby="salad-tab">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="single_menu_list">
+                        <!--<img src="http://infinityflamesoft.com/html/restarunt-preview/assets/img/menu/menu-2.jpg" alt="">-->
+                        <div class="menu_content" ng-repeat="salad in salads" ng-hide="$odd">
+                            <h4>{{salad.Name}}  <span>{{salad.Price}}&nbsp &nbsp{{salad.Large}}</span></h4>
+                            <p>{{salad.Description}}</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="single_menu_list">
+                        <!--<img src="http://infinityflamesoft.com/html/restarunt-preview/assets/img/menu/menu-2.jpg" alt="">-->
+                        <div class="menu_content" ng-repeat="salad in salads" ng-hide="$even">
+                            <h4>{{salad.Name}}  <span>{{salad.Price}}&nbsp &nbsp{{salad.Large}}</span></h4>
+                            <p>{{salad.Description}}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="tab-pane fade" id="pizza" role="tabpanel" aria-labelledby="pizza-tab">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="single_menu_list">
+                        <!--<img src="http://infinityflamesoft.com/html/restarunt-preview/assets/img/menu/menu-2.jpg" alt="">-->
+                        <div class="menu_content" ng-repeat="pizza in pizzas" ng-hide="$odd">
+                            <h4>{{pizza.Name}}  <span>{{pizza.Price}}&nbsp &nbsp{{pizza.Large}}</span></h4>
+                            <p>{{pizza.Description}}</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="single_menu_list">
+                        <!--<img src="http://infinityflamesoft.com/html/restarunt-preview/assets/img/menu/menu-2.jpg" alt="">-->
+                        <div class="menu_content" ng-repeat="pizza in pizzas" ng-hide="$even">
+                            <h4>{{pizza.Name}}  <span>{{pizza.Price}}&nbsp &nbsp{{pizza.Large}}</span></h4>
+                            <p>{{pizza.Description}}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="tab-pane fade" id="speciality" role="tabpanel" aria-labelledby="speciality-tab">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="single_menu_list">
+                        <div class="menu_content" ng-repeat="speciality in specialities" ng-hide="$odd">
+                            <!--<img src="{{speciality.image}}">-->
+                            <br>
+                            <h4>{{speciality.Name}}  <span>{{speciality.Price}}</span></h4>
+                            <p>{{speciality.Description}}</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="single_menu_list">
+                        <div class="menu_content" ng-repeat="speciality in specialities" ng-hide="$even">
+                            <!--<img src="{{speciality.image}}" alt="">-->
+                            <br>
+                            <h4>{{speciality.Name}}  <span>{{speciality.Price}}</span></h4>
+                            <p>{{speciality.Description}}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="tab-pane fade" id="pasta" role="tabpanel" aria-labelledby="pasta-tab">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="single_menu_list">
+                        <!--<img src="http://infinityflamesoft.com/html/restarunt-preview/assets/img/menu/menu-2.jpg" alt="">-->
+                        <div class="menu_content" ng-repeat="pasta in pastas" ng-hide="$odd">
+                            <h4>{{pasta.Name}}  <span>{{pasta.Price}}</span></h4>
+                            <p>{{pasta.Description}}</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="single_menu_list">
+                        <!--<img src="http://infinityflamesoft.com/html/restarunt-preview/assets/img/menu/menu-2.jpg" alt="">-->
+                        <div class="menu_content" ng-repeat="pasta in pastas" ng-hide="$even">
+                            <h4>{{pasta.Name}}  <span>{{pasta.Price}}</span></h4>
+                            <p>{{pasta.Description}}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="tab-pane fade" id="entrees" role="tabpanel" aria-labelledby="entrees-tab">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="single_menu_list">
+                        <!--<img src="http://infinityflamesoft.com/html/restarunt-preview/assets/img/menu/menu-2.jpg" alt="">-->
+                        <div class="menu_content" ng-repeat="entree in entrees" ng-hide="$odd">
+                            <h4>{{entree.Name}}  <span>{{entree.Price}}</span></h4>
+                            <p>{{entree.Description}}</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="single_menu_list">
+                        <!--<img src="http://infinityflamesoft.com/html/restarunt-preview/assets/img/menu/menu-2.jpg" alt="">-->
+                        <div class="menu_content" ng-repeat="entree in entrees" ng-hide="$even">
+                            <h4>{{entree.Name}}  <span>{{entree.Price}}</span></h4>
+                            <p>{{entree.Description}}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="tab-pane fade" id="bakedpasta" role="tabpanel" aria-labelledby="bakedpasta-tab">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="single_menu_list">
+                        <!--<img src="http://infinityflamesoft.com/html/restarunt-preview/assets/img/menu/menu-2.jpg" alt="">-->
+                        <div class="menu_content" ng-repeat="bakedpasta in baked" ng-hide="$odd">
+                            <h4>{{bakedpasta.Name}}  <span>{{bakedpasta.Price}}</span></h4>
+                            <p>{{bakedpasta.Description}}</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="single_menu_list">
+                        <!--<img src="http://infinityflamesoft.com/html/restarunt-preview/assets/img/menu/menu-2.jpg" alt="">-->>
+                        <div class="menu_content" ng-repeat="bakedpasta in baked" ng-hide="$even">
+                            <h4>{{bakedpasta.Name}}  <span>{{bakedpasta.Price}}</span></h4>
+                            <p>{{bakedpasta.Description}}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="tab-pane fade" id="sea" role="tabpanel" aria-labelledby="sea-tab">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="single_menu_list">
+                        <!--<img src="http://infinityflamesoft.com/html/restarunt-preview/assets/img/menu/menu-2.jpg" alt="">-->
+                        <div class="menu_content" ng-repeat="seafood in seafoods" ng-hide="$odd">
+                            <h4>{{seafood.Name}}  <span>{{seafood.Price}}</span></h4>
+                            <p>{{seafood.Description}}</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="single_menu_list">
+                        <!--<img src="http://infinityflamesoft.com/html/restarunt-preview/assets/img/menu/menu-2.jpg" alt="">-->
+                        <div class="menu_content" ng-repeat="seafood in seafoods" ng-hide="$even">
+                            <h4>{{seafood.Name}}  <span>{{seafood.Price}}</span></h4>
+                            <p>{{seafood.Description}}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="tab-pane fade" id="sub" role="tabpanel" aria-labelledby="sub-tab">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="single_menu_list">
+                        <!--<img src="http://infinityflamesoft.com/html/restarunt-preview/assets/img/menu/menu-2.jpg" alt="">-->
+                        <div class="menu_content" ng-repeat="specialitysub in specialitysubs" ng-hide="$odd">
+                            <h4>{{specialitysub.Name}}  <span>{{specialitysub.Price}}&nbsp &nbsp{{specialitysub.Large}}</span></h4>
+                            <p>{{specialitysub.Description}}</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="single_menu_list">
+                        <!--<img src="http://infinityflamesoft.com/html/restarunt-preview/assets/img/menu/menu-2.jpg" alt="">-->
+                        <div class="menu_content" ng-repeat="specialitysub in specialitysubs" ng-hide="$even">
+                            <h4>{{specialitysub.Name}}  <span>{{specialitysub.Price}}&nbsp &nbsp{{specialitysub.Large}}</span></h4>
+                            <p>{{specialitysub.Description}}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="tab-pane fade" id="soup" role="tabpanel" aria-labelledby="soup-tab">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="single_menu_list">
+                        <!--<img src="http://infinityflamesoft.com/html/restarunt-preview/assets/img/menu/menu-2.jpg" alt="">-->
+                        <div class="menu_content" ng-repeat="soup in soups" ng-hide="$odd">
+                            <h4>{{soup.Name}}  <span>{{soup.Price}}&nbsp &nbsp{{soup.Large}}</span></h4>
+                            <p>{{soup.Description}}</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="single_menu_list">
+                        <!--<img src="http://infinityflamesoft.com/html/restarunt-preview/assets/img/menu/menu-2.jpg" alt="">-->
+                        <div class="menu_content" ng-repeat="soup in soups" ng-hide="$even">
+                            <h4>{{soup.Name}}  <span>{{soup.Price}}&nbsp &nbsp{{soup.Large}}</span></h4>
+                            <p>{{soup.Description}}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="tab-pane fade" id="wrap" role="tabpanel" aria-labelledby="wrap-tab">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="single_menu_list">
+                        <!--<img src="http://infinityflamesoft.com/html/restarunt-preview/assets/img/menu/menu-2.jpg" alt="">-->
+                        <div class="menu_content" ng-repeat="wrap in wraps" ng-hide="$odd">
+                            <h4>{{wrap.Name}}  <span>{{wrap.Price}}</span></h4>
+                            <p>{{wrap.Description}}</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="single_menu_list">
+                        <!--<img src="http://infinityflamesoft.com/html/restarunt-preview/assets/img/menu/menu-2.jpg" alt="">-->
+                        <div class="menu_content" ng-repeat="wrap in wraps" ng-hide="$even">
+                            <h4>{{wrap.Name}}  <span>{{wrap.Price}}</span></h4>
+                            <p>{{wrap.Description}}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="tab-pane fade" id="panini" role="tabpanel" aria-labelledby="panini-tab">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="single_menu_list">
+                        <!--<img src="http://infinityflamesoft.com/html/restarunt-preview/assets/img/menu/menu-2.jpg" alt="">-->
+                        <div class="menu_content" ng-repeat="panini in paninis" ng-hide="$odd">
+                            <h4>{{panini.Name}}  <span>{{panini.Price}}</span></h4>
+                            <p>{{panini.Description}}</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="single_menu_list">
+                        <!--<img src="http://infinityflamesoft.com/html/restarunt-preview/assets/img/menu/menu-2.jpg" alt="">-->
+                        <div class="menu_content" ng-repeat="panini in paninis" ng-hide="$even">
+                            <h4>{{panini.Name}}  <span>{{panini.Price}}</span></h4>
+                            <p>{{panini.Description}}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="tab-pane fade" id="side" role="tabpanel" aria-labelledby="side-tab">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="single_menu_list">
+                        <!--<img src="http://infinityflamesoft.com/html/restarunt-preview/assets/img/menu/menu-2.jpg" alt="">-->
+                        <div class="menu_content" ng-repeat="side in sides" ng-hide="$odd">
+                            <h4>{{side.Name}}  <span>{{side.Price}}</span></h4>
+                            <p>{{side.Description}}</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="single_menu_list">
+                        <!--<img src="http://infinityflamesoft.com/html/restarunt-preview/assets/img/menu/menu-2.jpg" alt="">-->
+                        <div class="menu_content" ng-repeat="side in sides" ng-hide="$even">
+                            <h4>{{side.Name}}  <span>{{side.Price}}</span></h4>
+                            <p>{{side.Description}}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="tab-pane fade" id="burger" role="tabpanel" aria-labelledby="burger-tab">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="single_menu_list">
+                        <!--<img src="http://infinityflamesoft.com/html/restarunt-preview/assets/img/menu/menu-2.jpg" alt="">-->
+                        <div class="menu_content" ng-repeat="burger in burgers" ng-hide="$odd">
+                            <h4>{{burger.Name}}  <span>{{burger.Price}}</span></h4>
+                            <p>{{burger.Description}}</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="single_menu_list">
+                        <!--<img src="http://infinityflamesoft.com/html/restarunt-preview/assets/img/menu/menu-2.jpg" alt="">-->
+                        <div class="menu_content" ng-repeat="burger in burgers" ng-hide="$even">
+                            <h4>{{burger.Name}}  <span>{{burger.Price}}</span></h4>
+                            <p>{{burger.Description}}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="tab-pane fade" id="hot" role="tabpanel" aria-labelledby="hot-tab">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="single_menu_list">
+                        <!--<img src="http://infinityflamesoft.com/html/restarunt-preview/assets/img/menu/menu-5.jpg" alt="">-->
+                        <div class="menu_content" ng-repeat="hotsub in hotsubs" ng-hide="$odd">
+                            <h4>{{hotsub.Name}}  <span>{{hotsub.Price}}&nbsp &nbsp{{hotsub.Large}}</span></h4>
+                            <p>{{hotsub.Description}}</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="single_menu_list">
+                        <!--<img src="http://infinityflamesoft.com/html/restarunt-preview/assets/img/menu/menu-5.jpg" alt="">-->
+                        <div class="menu_content" ng-repeat="hotsub in hotsubs" ng-hide="$even">
+                            <h4>{{hotsub.Name}}  <span>{{hotsub.Price}}&nbsp &nbsp{{hotsub.Large}}</span></h4>
+                            <p>{{hotsub.Description}}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="tab-pane fade" id="cold" role="tabpanel" aria-labelledby="cold-tab">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="single_menu_list">
+                        <!--<img src="http://infinityflamesoft.com/html/restarunt-preview/assets/img/menu/menu-5.jpg" alt="">-->
+                        <div class="menu_content" ng-repeat="coldsub in coldsubs" ng-hide="$odd">
+                            <h4>{{coldsub.Name}}  <span>{{coldsub.Price}}&nbsp &nbsp{{coldsub.Large}}</span></h4>
+                            <p>{{coldsub.Description}}</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="single_menu_list">
+                        <!--<img src="http://infinityflamesoft.com/html/restarunt-preview/assets/img/menu/menu-5.jpg" alt="">-->
+                        <div class="menu_content" ng-repeat="coldsub in coldsubs" ng-hide="$even">
+                            <h4>{{coldsub.Name}}  <span>{{coldsub.Price}}&nbsp &nbsp{{coldsub.Large}}</span></h4>
+                            <p>{{coldsub.Description}}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xl-12 text-center">
+                <div class="box_btn">
+                    <a href="#">View More</a>
+                </div>
+            </div>
+        </div>
+        </div>
     </section>
     <section id="three" class="no-padding">
-        <div class="container-fluid">
+        <div class="section-title text-center mb-60">
+            <p></p>
+            <h4>Gallery</h4>
+        </div>
+        <!--<div class="container-fluid">
             <div class="row no-gutter">
                 <div class="col-lg-4 col-sm-6">
+                    <div class="section-title text-center mb-60">
+                        <p>Famous for good food</p>
+                        <h4>Catering</h4>
+                    </div>
                     <a href="#galleryModal" class="gallery-box" data-toggle="modal" data-src="//splashbase.s3.amazonaws.com/getrefe/regular/tumblr_nqune4OGHl1slhhf0o1_1280.jpg">
                         <img src="//splashbase.s3.amazonaws.com/getrefe/regular/tumblr_nqune4OGHl1slhhf0o1_1280.jpg" class="img-responsive" alt="Image 1">
                         <div class="gallery-box-caption">
@@ -1305,7 +1347,7 @@
                     </a>
                 </div>
             </div>
-        </div>
+        </div>-->
     </section>
     <section class="menu_list mt-60 mb-60" id="four">
         <div class="container">
@@ -1336,7 +1378,7 @@
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="single_menu_list">
-                                    <img src="http://infinityflamesoft.com/html/restarunt-preview/assets/img/menu/menu-5.jpg" alt="">
+                                    <!--<img src="http://infinityflamesoft.com/html/restarunt-preview/assets/img/menu/menu-5.jpg" alt="">-->
                                     <div class="menu_content" ng-repeat="pollo in pollos" ng-hide="$odd">
                                         <h4>{{pollo.Name}}  <span>{{pollo.half}}&nbsp &nbsp{{pollo.full}}</span></h4>
                                         <p>{{pollo.Description}}</p>
@@ -1345,7 +1387,7 @@
                             </div>
                             <div class="col-md-6">
                                 <div class="single_menu_list">
-                                    <img src="http://infinityflamesoft.com/html/restarunt-preview/assets/img/menu/menu-5.jpg" alt="">
+                                    <!--<img src="http://infinityflamesoft.com/html/restarunt-preview/assets/img/menu/menu-5.jpg" alt="">-->
                                     <div class="menu_content" ng-repeat="pollo in pollos" ng-hide="$even">
                                         <h4>{{pollo.Name}}  <span>{{pollo.half}}&nbsp &nbsp{{pollo.full}}</span></h4>
                                         <p>{{pollo.Description}}</p>
@@ -1358,7 +1400,7 @@
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="single_menu_list">
-                                    <img src="http://infinityflamesoft.com/html/restarunt-preview/assets/img/menu/menu-2.jpg" alt="">
+                                    <!--<img src="http://infinityflamesoft.com/html/restarunt-preview/assets/img/menu/menu-5.jpg" alt="">-->
                                     <div class="menu_content" ng-repeat="sea in seas" ng-hide="$odd">
                                         <h4>{{sea.Name}}  <span>{{sea.half}}&nbsp &nbsp{{sea.full}}</span></h4>
                                         <p>{{sea.Description}}</p>
@@ -1367,7 +1409,7 @@
                             </div>
                             <div class="col-md-6">
                                 <div class="single_menu_list">
-                                    <img src="http://infinityflamesoft.com/html/restarunt-preview/assets/img/menu/menu-2.jpg" alt="">
+                                    <!--<img src="http://infinityflamesoft.com/html/restarunt-preview/assets/img/menu/menu-5.jpg" alt="">-->
                                     <div class="menu_content" ng-repeat="sea in seas" ng-hide="$even">
                                         <h4>{{sea.Name}}  <span>{{sea.half}}&nbsp &nbsp{{sea.full}}</span></h4>
                                         <p>{{sea.Description}}</p>
@@ -1380,7 +1422,7 @@
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="single_menu_list">
-                                    <img src="http://infinityflamesoft.com/html/restarunt-preview/assets/img/menu/menu-2.jpg" alt="">
+                                    <!--<img src="http://infinityflamesoft.com/html/restarunt-preview/assets/img/menu/menu-5.jpg" alt="">-->
                                     <div class="menu_content" ng-repeat="pastabake in pastabakes" ng-hide="$odd">
                                         <h4>{{pastabake.Name}}  <span>{{pastabake.half}}&nbsp &nbsp{{pastabake.full}}</span></h4>
                                         <p>{{pastabake.Description}}</p>
@@ -1389,7 +1431,7 @@
                             </div>
                             <div class="col-md-6">
                                 <div class="single_menu_list">
-                                    <img src="http://infinityflamesoft.com/html/restarunt-preview/assets/img/menu/menu-2.jpg" alt="">
+                                    <!--<img src="http://infinityflamesoft.com/html/restarunt-preview/assets/img/menu/menu-5.jpg" alt="">-->
                                     <div class="menu_content" ng-repeat="pastabake in pastabakes" ng-hide="$even">
                                         <h4>{{pastabake.Name}}  <span>{{pastabake.half}}&nbsp &nbsp{{pastabake.full}}</span></h4>
                                         <p>{{pastabake.Description}}</p>
@@ -1398,14 +1440,14 @@
                             </div>
                         </div>
                     </div>
-            <div class="row">
-                <div class="col-xl-12 text-center">
-                    <div class="box_btn">
-                        <a href="#">View More</a>
+                    <div class="row">
+                        <div class="col-xl-12 text-center">
+                            <div class="box_btn">
+                                <a href="#">View More</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </div>
     </section>
     <aside class="bg-dark">
         <!--<div class="container text-center">
@@ -1444,7 +1486,7 @@
                     <h2 class="margin-top-0 wow fadeIn">Get in Touch</h2>
                     <hr class="primary">
                     <p>We love feedback. Fill out the form below and we'll get back to you as soon as possible.
-                        <br> Call Us at: <a href="tel:201-519-2148">201-519-2148</a></p>
+                        <br> Call Us at: <a href="tel:(973) 751-3577">(973) 751-3577</a></p>
                 </div>
                 <div class="col-lg-10 col-lg-offset-1 text-center">
                     <form method="post" name="contact_form">
@@ -1535,14 +1577,56 @@
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-body">
-                    <h2 class="text-center">Landing Zero Theme</h2>
-                    <h5 class="text-center">
-                     A free, responsive landing page theme built by BootstrapZero.
-                  </h5>
-                    <p class="text-justify">
-                        This is a single-page Bootstrap template with a sleek dark/grey color scheme, accent color and smooth scrolling. There are vertical content sections with subtle animations that are activated when scrolled into view using the jQuery WOW plugin. There is also a gallery with modals that work nicely to showcase your work portfolio. Other features include a contact form, email subscribe form, multi-column footer. Uses Questrial Google Font and Ionicons.
-                    </p>
-                    <p class="text-center"><a href="http://www.bootstrapzero.com">Download at BootstrapZero</a></p>
+                    <h2 class="text-center">Opening Hours</h2>
+                    <div class="header">
+                        <h2>Opening hours</h2>
+                        <span id="open-status"><small class="openorclosed">We are</small></span>
+                    </div>
+                    <table class="opening-hours-table">
+                        <tr id="Monday" itemprop="openingHours" title="Open Monday at 9am to 6pm">
+                            <td>Monday</td>
+                            <td class="opens">09:00</td>
+                            <td>-</td>
+                            <td class="closes">12:00</td>
+                        </tr>
+                        <tr id="Tuesday" itemprop="openingHours" title="Open Tuesday at 9am to 6pm">
+                            <td>Tuesday</td>
+                            <td class="opens">09:00</td>
+                            <td>-</td>
+                            <td class="closes">18:00</td>
+                        </tr>
+                        <tr id="Wednesday" itemprop="openingHours" title="Open Wednesday at 9am to 6pm">
+                            <td>Wednesday</td>
+                            <td class="opens">09:00</td>
+                            <td>-</td>
+                            <td class="closes">18:00</td>
+                        </tr>
+                        <tr id="Thursday" itemprop="openingHours" title="Open Thursday at 9am to 8pm">
+                            <td>Thursday</td>
+                            <td class="opens">09:00</td>
+                            <td>-</td>
+                            <td class="closes">20:00</td>
+                        </tr>
+                        <tr id="Friday" itemprop="openingHours" title="Open Friday at 9am to 6pm">
+                            <td>Friday</td>
+                            <td class="opens">09:00</td>
+                            <td>-</td>
+                            <td class="closes">18:00</td>
+                        </tr>
+                        <tr id="Saturday" itemprop="openingHours" title="Open Saturday at 10am to 6pm">
+                            <td>Saturday</td>
+                            <td class="opens">10:00</td>
+                            <td>-</td>
+                            <td class="closes">18:00</td>
+                        </tr>
+                        <tr id="Sunday" itemprop="openingHours" title="Open Sunday at 11am to 4pm">
+                            <td>Sunday</td>
+                            <td class="opens">11:00</td>
+                            <td>-</td>
+                            <td class="closes">16:00</td>
+                        </tr>
+                    </table>
+                    <p></p>
                     <br />
                     <button class="btn btn-primary btn-lg center-block" data-dismiss="modal" aria-hidden="true"> OK </button>
                 </div>
@@ -1613,6 +1697,7 @@
         app.controller('menuCtrl', function($scope, $http) {
             $http.get("menu1.json")
                 .then(function(response) {
+                    console.log(response);
                     $scope.pizzas = response.data.pizza;
                     $scope.pastas = response.data.pasta;
                     $scope.desserts = response.data.dessert;
@@ -1679,6 +1764,58 @@ b3.addEventListener("click", incrementValue, false);
         window.parent.postMessage( iframe_height, 'https://bootsnipp.com');
     });
 </script>-->
+    <script>
+        var currentDate = new Date();
+        var weekday = [];
+        weekday[0] = "Sunday";
+        weekday[1] = "Monday";
+        weekday[2] = "Tuesday";
+        weekday[3] = "Wednesday";
+        weekday[4] = "Thursday";
+        weekday[5] = "Friday";
+        weekday[6] = "Saturday";
+
+        var currentDay = weekday[currentDate.getDay()];
+
+        var currentTimeHours = currentDate.getHours();
+        currentTimeHours = currentTimeHours < 10 ? "0" + currentTimeHours : currentTimeHours;
+        var currentTimeMinutes = currentDate.getMinutes();
+        var timeNow = currentTimeHours + "" + currentTimeMinutes;
+
+        var currentDayID = "#" + currentDay; //gets todays weekday and turns it into id
+        $(currentDayID).toggleClass("today"); //this works at hightlighting today
+
+        var openTimeSplit = $(currentDayID).children('.opens').text().split(":");
+
+        var openTimeHours = openTimeSplit[0];
+        openTimeHours = openTimeHours < 10 ? "0" + openTimeHours : openTimeHours;
+
+        var openTimeMinutes = openTimeSplit[1];
+        var openTimex = openTimeSplit[0] + openTimeSplit[1];
+
+        var closeTimeSplit = $(currentDayID).children('.closes').text().split(":");
+
+        var closeTimeHours = closeTimeSplit[0];
+        closeTimeHours = closeTimeHours < 10 ? "0" + closeTimeHours : closeTimeHours;
+
+        var closeTimeMinutes = closeTimeSplit[1];
+        var closeTimex = closeTimeSplit[0] + closeTimeSplit[1];
+
+        if (timeNow >= openTimex && timeNow <= closeTimex) {
+            $(".openorclosed").toggleClass("open");
+        } else {
+            $(".openorclosed").toggleClass("closed");
+        }
+        (function(e, t, n, r) {
+            if (e) return;
+            t._appt = true;
+            var i = n.createElement(r),
+                s = n.getElementsByTagName(r)[0];
+            i.async = true;
+            i.src = '//dje0x8zlxc38k.cloudfront.net/loaders/s-min.js';
+            s.parentNode.insertBefore(i, s)
+        })(window._appt, window, document, "script")
+    </script>
 </body>
 
 </html>
