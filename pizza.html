@@ -757,7 +757,7 @@
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
                     <li>
-                        <a class="page-scroll" data-toggle="modal" title="A free Bootstrap video landing theme" href="#aboutModal">View Hours</a>
+                        <a class="page-scroll" data-toggle="modal" title="" href="#aboutModal">View Hours</a>
                     </li>
 
                     <!--<li class="dropdown">
@@ -1577,55 +1577,41 @@
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-body">
-                    <h2 class="text-center">Opening Hours</h2>
-                    <div class="header">
-                        <h2>Opening hours</h2>
-                        <span id="open-status"><small class="openorclosed">We are</small></span>
+                    <h2>We're Open At These Times</h2>
+                    <div id="Wednesday" class="dateTime">
+                        <div class="day">Wednesday</div>
+                        <div class="time">4pm - 12am</div>
                     </div>
-                    <table class="opening-hours-table">
-                        <tr id="Monday" itemprop="openingHours" title="Open Monday at 9am to 6pm">
-                            <td>Monday</td>
-                            <td class="opens">09:00</td>
-                            <td>-</td>
-                            <td class="closes">12:00</td>
-                        </tr>
-                        <tr id="Tuesday" itemprop="openingHours" title="Open Tuesday at 9am to 6pm">
-                            <td>Tuesday</td>
-                            <td class="opens">09:00</td>
-                            <td>-</td>
-                            <td class="closes">18:00</td>
-                        </tr>
-                        <tr id="Wednesday" itemprop="openingHours" title="Open Wednesday at 9am to 6pm">
-                            <td>Wednesday</td>
-                            <td class="opens">09:00</td>
-                            <td>-</td>
-                            <td class="closes">18:00</td>
-                        </tr>
-                        <tr id="Thursday" itemprop="openingHours" title="Open Thursday at 9am to 8pm">
-                            <td>Thursday</td>
-                            <td class="opens">09:00</td>
-                            <td>-</td>
-                            <td class="closes">20:00</td>
-                        </tr>
-                        <tr id="Friday" itemprop="openingHours" title="Open Friday at 9am to 6pm">
-                            <td>Friday</td>
-                            <td class="opens">09:00</td>
-                            <td>-</td>
-                            <td class="closes">18:00</td>
-                        </tr>
-                        <tr id="Saturday" itemprop="openingHours" title="Open Saturday at 10am to 6pm">
-                            <td>Saturday</td>
-                            <td class="opens">10:00</td>
-                            <td>-</td>
-                            <td class="closes">18:00</td>
-                        </tr>
-                        <tr id="Sunday" itemprop="openingHours" title="Open Sunday at 11am to 4pm">
-                            <td>Sunday</td>
-                            <td class="opens">11:00</td>
-                            <td>-</td>
-                            <td class="closes">16:00</td>
-                        </tr>
-                    </table>
+                    <br>
+                    <div id="Thursday" class="dateTime">
+                        <div class="day">Thursday</div>
+                        <div class="time">4pm - 12am</div>
+                    </div>
+                    <br>
+                    <div id="Friday" class="dateTime">
+                        <div class="day">Friday</div>
+                        <div class="time">4pm - 12am</div>
+                    </div>
+                    <br>
+                    <div id="Saturday" class="dateTime">
+                        <div class="day">Saturday</div>
+                        <div class="time">1pm - 12am</div>
+                    </div>
+                    <br>
+                    <div id="Sunday" class="dateTime">
+                        <div class="day">Sunday</div>
+                        <div class="time">10am - 11pm</div>
+                    </div>
+                    <br>
+                    <div id="Monday" class="dateTime">
+                        <div class="day">Monday</div>
+                        <div class="time">Closed</div>
+                    </div>
+                    <br>
+                    <div id="Tuesday" class="dateTime">
+                        <div class="day">Tuesday</div>
+                        <div class="time">Closed</div>
+                    </div>
                     <p></p>
                     <br />
                     <button class="btn btn-primary btn-lg center-block" data-dismiss="modal" aria-hidden="true"> OK </button>
@@ -1765,8 +1751,8 @@ b3.addEventListener("click", incrementValue, false);
     });
 </script>-->
     <script>
-        var currentDate = new Date();
-        var weekday = [];
+        var now = new Date();
+        var weekday = new Array(7);
         weekday[0] = "Sunday";
         weekday[1] = "Monday";
         weekday[2] = "Tuesday";
@@ -1775,46 +1761,49 @@ b3.addEventListener("click", incrementValue, false);
         weekday[5] = "Friday";
         weekday[6] = "Saturday";
 
-        var currentDay = weekday[currentDate.getDay()];
+        var checkTime = function() {
+            var today = weekday[now.getDay()];
+            var timeDiv = document.getElementById('timeDiv');
+            var dayOfWeek = now.getDay();
+            var hour = now.getHours();
+            var minutes = now.getMinutes();
 
-        var currentTimeHours = currentDate.getHours();
-        currentTimeHours = currentTimeHours < 10 ? "0" + currentTimeHours : currentTimeHours;
-        var currentTimeMinutes = currentDate.getMinutes();
-        var timeNow = currentTimeHours + "" + currentTimeMinutes;
+            //add AM or PM
+            var suffix = hour >= 12 ? "PM" : "AM";
 
+            // add 0 to one digit minutes
+            if (minutes < 10) {
+                minutes = "0" + minutes;
+            };
+
+            if ((dayOfWeek == 0 || dayOfWeek == 6) && hour >= 13 && hour <= 23) {
+                hour = (hour + 11) % 12 + 1; //i.e. show 1:15 instead of 13:15
+                timeDiv.innerHTML = 'it\'s ' + today + ' ' + hour + ':' + minutes + suffix + ' - we\'re open!';
+                timeDiv.className = 'open';
+            } else
+
+            if ((dayOfWeek == 3 || dayOfWeek == 4 || dayOfWeek == 5) && hour >= 16 && hour <= 23) {
+                hour = (hour + 11) % 12 + 1;
+                timeDiv.innerHTML = 'it\'s ' + today + ' ' + hour + ':' + minutes + suffix + ' - we\'re open!';
+                timeDiv.className = 'open';
+            } else
+
+            {
+                if (hour == 0 || hour > 12) {
+                    hour = (hour + 11) % 12 + 1; //i.e. show 1:15 instead of 13:15
+                }
+                timeDiv.innerHTML = 'It\'s ' + today + ' ' + hour + ':' + minutes + suffix + ' - we\'re closed!';
+                timeDiv.className = 'closed';
+            }
+        };
+
+        var currentDay = weekday[now.getDay()];
         var currentDayID = "#" + currentDay; //gets todays weekday and turns it into id
-        $(currentDayID).toggleClass("today"); //this works at hightlighting today
+        $(currentDayID).toggleClass("today"); //hightlights today in the view hours modal popup
 
-        var openTimeSplit = $(currentDayID).children('.opens').text().split(":");
-
-        var openTimeHours = openTimeSplit[0];
-        openTimeHours = openTimeHours < 10 ? "0" + openTimeHours : openTimeHours;
-
-        var openTimeMinutes = openTimeSplit[1];
-        var openTimex = openTimeSplit[0] + openTimeSplit[1];
-
-        var closeTimeSplit = $(currentDayID).children('.closes').text().split(":");
-
-        var closeTimeHours = closeTimeSplit[0];
-        closeTimeHours = closeTimeHours < 10 ? "0" + closeTimeHours : closeTimeHours;
-
-        var closeTimeMinutes = closeTimeSplit[1];
-        var closeTimex = closeTimeSplit[0] + closeTimeSplit[1];
-
-        if (timeNow >= openTimex && timeNow <= closeTimex) {
-            $(".openorclosed").toggleClass("open");
-        } else {
-            $(".openorclosed").toggleClass("closed");
-        }
-        (function(e, t, n, r) {
-            if (e) return;
-            t._appt = true;
-            var i = n.createElement(r),
-                s = n.getElementsByTagName(r)[0];
-            i.async = true;
-            i.src = '//dje0x8zlxc38k.cloudfront.net/loaders/s-min.js';
-            s.parentNode.insertBefore(i, s)
-        })(window._appt, window, document, "script")
+        setInterval(checkTime, 1000);
+        checkTime();
+        //# sourceURL=pen.js
     </script>
 </body>
 
