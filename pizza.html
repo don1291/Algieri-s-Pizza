@@ -645,72 +645,48 @@
             font-style: italic;
         }
         
-        .openinghours {
-            font-family: Lucida Console;
-            border-radius: 4px;
-            margin: 10px;
-            box-shadow: 0 0 10px black;
-            padding: 0 10px 0 10px;
-            overflow: hidden;
+        #timeDiv {
+            font-size: 15px;
+            text-transform: uppercase;
+            position: relative;
+            max-width: 325px;
+            background: #fff;
+            width: 85%;
+            margin: 0 auto;
+            top: 55%;
+            padding: 10px;
+            border-radius: 3px;
+            -webkit-box-shadow: 0 8px 16px -8px #adadad;
+            -moz-box-shadow: 0 8px 16px -8px #adadad;
+            box-shadow: 0 8px 16px -8px #adadad;
             display: inline-block;
-        }
-        
-        .openinghourscontent {
-            float: left;
-        }
-        
-        .openinghourscontent h2 {
-            display: block;
-            text-align: center;
-            margin-top: .33em;
-        }
-        
-        .openinghourscontent button {
-            color: white;
-            font-family: Courier New;
-            font-size: large;
-            font-weight: bolder;
-            background-color: #4679BD;
-            border-radius: 4px;
-            width: 100%;
-            margin-bottom: 10px;
-        }
-        
-        .today {
-            color: #8AC007;
-        }
-        
-        .opening-hours-table tr td:first-child {
-            font-weight: bold;
-        }
-        
-        #open-status {
-            display: block;
-            margin-top: -1em;
-            text-align: center;
-            border: dotted lightgrey 3px;
-        }
-        
-        .openorclosed:after {
-            content: " open during these hours:";
+            vertical-align: top;
+            font-weight: 600;
         }
         
         .open {
+            color: #27ae60;
+            border: 2px solid #27ae60;
+        }
+        
+        .closed {
+            color: rgba(231, 76, 60, 0.85);
+            border: 2px solid rgba(231, 76, 60, 0.8);
+        }
+        
+        .day {
+            display: inline-block;
+            float: left;
+        }
+        
+        .time {
+            display: inline-block;
+            float: right
+        }
+        
+        .today {
             color: green;
-        }
-        
-        .open:after {
-            content: " Open";
-            color: #6C0;
-        }
-        
-        .closed:after {
-            content: " Closed";
-            color: red;
-        }
-        
-        .opening-hours-table tr td {
-            padding: 5px;
+            font-weight: 600;
         }
     </style>
     <!-- AngularJS -->
@@ -789,6 +765,8 @@
                 <hr>
                 <a href="#two" data-toggle="collapse" class="page-scroll btn btn-primary btn-xl">View Menu</a> &nbsp; <a href="https://slicelife.com/restaurants/nj/belleville/07109/algieri-s-pizza/menu" class="btn btn-primary btn-xl page-scroll">Get Started</a>
             </div>
+            <br>
+            <div id="timeDiv" class="open"></div>
         </div>
         <video>
         </video>
