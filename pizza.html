@@ -3,7 +3,7 @@
    <head>
       <meta charset="UTF-8">
       <link rel="mask-icon" type="" href="https://static.codepen.io/assets/favicon/logo-pin-8f3771b1072e3c38bd662872f6b673a722f4b3ca2421637d5596661b4e2132cc.svg" color="#111" />
-      <title>Alerigia's Pizza</title>
+      <title>Algieri's Pizza</title>
       <meta charset="utf-8">
       <title></title>
       <meta name="description" content="This is a free Bootstrap landing page theme created for BootstrapZero. Feature video background and one page design." />
@@ -12,9 +12,13 @@
       <link href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" rel="stylesheet" />
       <link rel="stylesheet" href="//code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" />
       <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css'>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+      
       <style>
          /*
          Landing Zero theme - A free landing page theme from BootstrapZero
@@ -531,27 +535,50 @@
             <div class="navbar-collapse collapse" id="bs-navbar">
                <ul class="nav navbar-nav">
                   <li>
-                     <a class="page-scroll" href="#one">Intro</a>
+                     <a class="page-scroll" href="#one">Special</a>
                   </li>
-                  <li>
-                     <a class="page-scroll" href="#two">Menu</a>
+                  <li class="dropdown">
+                     <a class="dropdown-toggle"data-toggle="dropdown">Menu <b class="caret"></b></a>
+                     <ul class="dropdown-menu">
+                        <li><a class="page-scroll" href="#app">Appetizer</a></li>
+                        <li><a class="page-scroll" href="#salad">Salad</a></li>
+                        <li><a class="page-scroll" href="#soup">Soup</a></li>
+                        <li><a class="page-scroll" href="#pizza">Pizza</a></li>
+                        <li><a class="page-scroll" href="#speciality">Speciality</a></li>
+                        <li><a class="page-scroll" href="#pasta">Pasta</a></li>
+                        <li><a class="page-scroll" href="#baked">Baked Pasta</a></li>
+                        <li><a class="page-scroll" href="#entree">Entree</a></li>
+                        <li><a class="page-scroll" href="#seafood">Seafood</a></li>
+                        <li><a class="page-scroll" href="#cold">Cold Subs</a></li>
+                        <li><a class="page-scroll" href="#hot">Hot Subs</a></li>
+                        <li><a class="page-scroll" href="#sub">Speciality Subs</a></li>
+                        <li><a class="page-scroll" href="#panini">Panini</a></li>
+                        <li><a class="page-scroll" href="#wrap">Wraps</a></li>
+                        <li><a class="page-scroll" href="#burgers">Burgers</a></li>
+                        <li><a class="page-scroll" href="#side">Sides</a></li>
+                     </ul>
                   </li>
                   <li>
                      <a class="page-scroll" href="#three">Gallery</a>
                   </li>
-                  <li>
-                     <a class="page-scroll" href="#four">Catering</a>
+                  <li class="dropdown">
+                     <a class="dropdown-toggle" data-toggle="dropdown">Catering<span class="caret"></span></a>
+                     <ul class="dropdown-menu">
+                        <li><a class="page-scroll" href="#pollos">Pollos</a></li>
+                        <li><a class="page-scroll" href="#bake">Baked Pasta</a></li>
+                        <li><a class="page-scroll" href="#sea">Seafood</a></li>
+                     </ul>
                   </li>
-                  <li>
+                  <li> 
                      <a class="page-scroll" href="#last">Contact</a>
                   </li>
-               </ul>
+            </ul>
                <ul class="nav navbar-nav navbar-right">
                   <li>
                      <a class="page-scroll" data-toggle="modal" title="A free Bootstrap video landing theme" href="#aboutModal">View Hours</a>
                   </li>
                   <li>
-                     <a id="my-dropdown" href="#" id="cart"><i class="fa fa-shopping-cart"></i> Cart <span class="badge">3</span></a>
+                     <!--<a id="my-dropdown" href="#" id="cart"><i class="fa fa-shopping-cart"></i> Cart <span class="badge">3</span></a>-->
                   </li>
                </ul>
             </div>
@@ -562,6 +589,7 @@
             <div class="inner">
                <h1 class="cursive">Algieri's Pizza Restaurant</h1>
                <h4>502 Union Ave Belleville, NJ</h4>
+               <h3> Call to order: (973) 751-5577 </h3>
                <hr>
                <a href="#two" data-toggle="collapse" class="page-scroll btn btn-primary btn-xl">View Menu</a> &nbsp; <a href="https://slicelife.com/restaurants/nj/belleville/07109/algieri-s-pizza/menu" class="btn btn-primary btn-xl page-scroll">Order Online</a>
             </div>
@@ -575,12 +603,12 @@
          <div class="container">
             <div class="row">
                <div class="col-lg-6 col-lg-offset-3 col-md-8 col-md-offset-2 text-center">
-                  <h2 class="margin-top-0 text-primary">Intro</h2>
+                  <h2 class="margin-top-0 text-primary">Special</h2>
                   <br>
                   <p class="text-faded">
-                     Coming soon
+                     Cheese Pizza Specials Monday and Tuesdays! $8.99 per pie
                   </p>
-                  <a href="#three" class="btn btn-default btn-xl page-scroll">OK</a>
+                  <!--<a href="#three" class="btn btn-default btn-xl page-scroll">OK</a>-->
                </div>
             </div>
          </div>
@@ -736,7 +764,7 @@
                   </tr>
                </tbody>
             </table>
-            <table class="table table-borderless table-hover" id="sea">
+            <table class="table table-borderless table-hover" id="seafood">
                <thead class="thead-dark">
                   <tr>
                      <th>Seafood</th>
@@ -880,7 +908,6 @@
                   </tr>
                </tbody>
             </table>-->
-            <table class="table">
             <table class="table table-borderless table-hover" id="side">
                <thead class="thead-dark">
                   <tr>
@@ -904,44 +931,8 @@
          <div class="container-fluid">
             <div class="row no-gutter">
                <div class="col-lg-4 col-sm-6">
-                  <a href="#galleryModal" class="gallery-box" data-toggle="modal" data-src="//splashbase.s3.amazonaws.com/getrefe/regular/tumblr_nqune4OGHl1slhhf0o1_1280.jpg">
-                     <img src="//splashbase.s3.amazonaws.com/getrefe/regular/tumblr_nqune4OGHl1slhhf0o1_1280.jpg" class="img-responsive" alt="Image 1">
-                     <div class="gallery-box-caption">
-                        <div class="gallery-box-content">
-                           <div>
-                              <i class="icon-lg ion-ios-search"></i>
-                           </div>
-                        </div>
-                     </div>
-                  </a>
-               </div>
-               <div class="col-lg-4 col-sm-9">
-                  <a href="#galleryModal" class="gallery-box" data-toggle="modal" data-src="//splashbase.s3.amazonaws.com/getrefe/regular/tumblr_nqune4OGHl1slhhf0o1_1280.jpg">
-                     <img src="//splashbase.s3.amazonaws.com/getrefe/regular/tumblr_nqune4OGHl1slhhf0o1_1280.jpg" class="img-responsive" alt="Image 2">
-                     <div class="gallery-box-caption">
-                        <div class="gallery-box-content">
-                           <div>
-                              <i class="icon-lg ion-ios-search"></i>
-                           </div>
-                        </div>
-                     </div>
-                  </a>
-               </div>
-               <div class="col-lg-4 col-sm-9">
-                  <a href="#galleryModal" class="gallery-box" data-toggle="modal" data-src="//splashbase.s3.amazonaws.com/unsplash/regular/photo-1433959352364-9314c5b6eb0b%3Fq%3D75%26fm%3Djpg%26w%3D1080%26fit%3Dmax%26s%3D3b9bc6caa190332e91472b6828a120a4">
-                     <img src="//splashbase.s3.amazonaws.com/unsplash/regular/photo-1433959352364-9314c5b6eb0b%3Fq%3D75%26fm%3Djpg%26w%3D1080%26fit%3Dmax%26s%3D3b9bc6caa190332e91472b6828a120a4" class="img-responsive" alt="Image 3">
-                     <div class="gallery-box-caption">
-                        <div class="gallery-box-content">
-                           <div>
-                              <i class="icon-lg ion-ios-search"></i>
-                           </div>
-                        </div>
-                     </div>
-                  </a>
-               </div>
-               <div class="col-lg-4 col-sm-9">
-                  <a href="#galleryModal" class="gallery-box" data-toggle="modal" data-src="//splashbase.s3.amazonaws.com/lifeofpix/regular/Life-of-Pix-free-stock-photos-moto-drawing-illusion-nabeel-1440x960.jpg">
-                     <img src="//splashbase.s3.amazonaws.com/lifeofpix/regular/Life-of-Pix-free-stock-photos-moto-drawing-illusion-nabeel-1440x960.jpg" class="img-responsive" alt="Image 4">
+                  <a href="#galleryModal" class="gallery-box" data-toggle="modal" data-src="https://scontent.fewr1-6.fna.fbcdn.net/v/t1.0-9/1236912_533048610099317_1570693402_n.jpg?_nc_cat=106&_nc_ohc=S6wV8_PvL3gAX8xwY6J&_nc_ht=scontent.fewr1-6.fna&oh=4b4475761be07167fdfb302fd802bb2a&oe=5EFF7684">
+                     <img src="https://scontent.fewr1-6.fna.fbcdn.net/v/t1.0-9/1236912_533048610099317_1570693402_n.jpg?_nc_cat=106&_nc_ohc=S6wV8_PvL3gAX8xwY6J&_nc_ht=scontent.fewr1-6.fna&oh=4b4475761be07167fdfb302fd802bb2a&oe=5EFF7684" class="img-responsive" alt="Image 1">
                      <div class="gallery-box-caption">
                         <div class="gallery-box-content">
                            <div>
@@ -952,8 +943,8 @@
                   </a>
                </div>
                <div class="col-lg-4 col-sm-6">
-                  <a href="#galleryModal" class="gallery-box" data-toggle="modal" data-src="//splashbase.s3.amazonaws.com/lifeofpix/regular/Life-of-Pix-free-stock-photos-new-york-crosswalk-nabeel-1440x960.jpg">
-                     <img src="//splashbase.s3.amazonaws.com/lifeofpix/regular/Life-of-Pix-free-stock-photos-new-york-crosswalk-nabeel-1440x960.jpg" class="img-responsive" alt="Image 5">
+                  <a href="#galleryModal" class="gallery-box" data-toggle="modal" data-src="https://scontent.fewr1-2.fna.fbcdn.net/v/t1.0-9/1395210_560653814005463_464940180_n.jpg?_nc_cat=111&_nc_ohc=uz9uf47EgDcAX-M6Ie-&_nc_ht=scontent.fewr1-2.fna&oh=4a9c81af8e6fbc1044c83af13f0a2284&oe=5ED6CF323">
+                     <img src="https://scontent.fewr1-6.fna.fbcdn.net/v/t1.0-9/10015168_631831706887673_1411044177_n.jpg?_nc_cat=106&_nc_ohc=biKWT6paGqQAX_PgWTS&_nc_ht=scontent.fewr1-6.fna&oh=73be02a197441560feb96c487644c57d&oe=5ECC07D3" class="img-responsive" alt="Image 3">
                      <div class="gallery-box-caption">
                         <div class="gallery-box-content">
                            <div>
@@ -964,8 +955,44 @@
                   </a>
                </div>
                <div class="col-lg-4 col-sm-6">
-                  <a href="#galleryModal" class="gallery-box" data-toggle="modal" data-src="//splashbase.s3.amazonaws.com/lifeofpix/regular/Life-of-Pix-free-stock-photos-clothes-exotic-travel-nabeel-1440x960.jpg">
-                     <img src="//splashbase.s3.amazonaws.com/lifeofpix/regular/Life-of-Pix-free-stock-photos-clothes-exotic-travel-nabeel-1440x960.jpg" class="img-responsive" alt="Image 6">
+                  <a href="#galleryModal" class="gallery-box" data-toggle="modal" data-src="https://scontent.fewr1-3.fna.fbcdn.net/v/t1.0-9/1524596_630222353715275_171583205_n.jpg?_nc_cat=110&_nc_ohc=k_zbxzmB-7gAX_HPCdJ&_nc_ht=scontent.fewr1-3.fna&oh=1b0cc954ec9a99433bfc2818c63bcc93&oe=5EB62964">
+                     <img src="https://scontent.fewr1-3.fna.fbcdn.net/v/t1.0-9/1524596_630222353715275_171583205_n.jpg?_nc_cat=110&_nc_ohc=k_zbxzmB-7gAX_HPCdJ&_nc_ht=scontent.fewr1-3.fna&oh=1b0cc954ec9a99433bfc2818c63bcc93&oe=5EB62964" class="img-responsive" alt="Image 4">
+                     <div class="gallery-box-caption">
+                        <div class="gallery-box-content">
+                           <div>
+                              <i class="icon-lg ion-ios-search"></i>
+                           </div>
+                        </div>
+                     </div>
+                  </a>
+               </div>
+               <div class="col-lg-4 col-sm-6">
+                  <a href="#galleryModal" class="gallery-box" data-toggle="modal" data-src="https://scontent.fewr1-5.fna.fbcdn.net/v/t1.0-9/10154928_632722750131902_2089299273_n.jpg?_nc_cat=104&_nc_ohc=cUmpaCdZXg0AX_3xDGr&_nc_ht=scontent.fewr1-5.fna&oh=c1b0657788f9e383cdeca917da2736b9&oe=5EC11863">
+                     <img src="https://scontent.fewr1-5.fna.fbcdn.net/v/t1.0-9/10154928_632722750131902_2089299273_n.jpg?_nc_cat=104&_nc_ohc=cUmpaCdZXg0AX_3xDGr&_nc_ht=scontent.fewr1-5.fna&oh=c1b0657788f9e383cdeca917da2736b9&oe=5EC11863" class="img-responsive" alt="Image 5">
+                     <div class="gallery-box-caption">
+                        <div class="gallery-box-content">
+                           <div>
+                              <i class="icon-lg ion-ios-search"></i>
+                           </div>
+                        </div>
+                     </div>
+                  </a>
+               </div>
+               <div class="col-lg-4 col-sm-6">
+                  <a href="#galleryModal" class="gallery-box" data-toggle="modal" data-src="https://scontent.fewr1-1.fna.fbcdn.net/v/t1.0-9/1503830_638728899531287_5715605653342816453_n.jpg?_nc_cat=100&_nc_ohc=IwY-2-JN3FkAX8u34qu&_nc_ht=scontent.fewr1-1.fna&oh=771ac9ac2dc91a63c17aa530cd55a442&oe=5EC5538A">
+                     <img src="https://scontent.fewr1-1.fna.fbcdn.net/v/t1.0-9/1503830_638728899531287_5715605653342816453_n.jpg?_nc_cat=100&_nc_ohc=IwY-2-JN3FkAX8u34qu&_nc_ht=scontent.fewr1-1.fna&oh=771ac9ac2dc91a63c17aa530cd55a442&oe=5EC5538A" class="img-responsive" alt="Image 6">
+                     <div class="gallery-box-caption">
+                        <div class="gallery-box-content">
+                           <div>
+                              <i class="icon-lg ion-ios-search"></i>
+                           </div>
+                        </div>
+                     </div>
+                  </a>
+               </div>
+               <div class="col-lg-4 col-sm-6">
+                  <a href="#galleryModal" class="gallery-box" data-toggle="modal" data-src="https://scontent.fewr1-5.fna.fbcdn.net/v/t1.0-9/1484702_642966409107536_6854880137493536451_n.jpg?_nc_cat=104&_nc_ohc=HoXJlkgpLe0AX-dicAb&_nc_ht=scontent.fewr1-5.fna&oh=5a9e08b75e52a86cf22e896fec808560&oe=5EC8320C">
+                     <img src="https://scontent.fewr1-5.fna.fbcdn.net/v/t1.0-9/1484702_642966409107536_6854880137493536451_n.jpg?_nc_cat=104&_nc_ohc=HoXJlkgpLe0AX-dicAb&_nc_ht=scontent.fewr1-5.fna&oh=5a9e08b75e52a86cf22e896fec808560&oe=5EC8320C" class="img-responsive" alt="Image 6">
                      <div class="gallery-box-caption">
                         <div class="gallery-box-content">
                            <div>
@@ -1021,10 +1048,10 @@
                   </tr>
                </tbody>
             </table>
-            <table class="table table-borderless table-hover" id="bake">
+            <table class="table table-borderless table-hover" id="sea">
                <thead class="thead-dark">
                   <tr>
-                     <th>Sea Food</th>
+                     <th>Seafood</th>
                      <th>Half</th>
                      <th>Full</th>
                   </tr>
@@ -1315,6 +1342,7 @@
             var dayOfWeek = now.getDay();
             var hour = now.getHours();
             var minutes = now.getMinutes();
+            var seconds = now.getSeconds();
 
             //add AM or PM
             var suffix = hour >= 12 ? "PM" : "AM";
@@ -1357,8 +1385,13 @@
 
         setInterval(checkTime, 1000);
         checkTime();
+        $('ul.nav li.dropdown').hover(function() {
+     $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeIn(500);
+   }, function() {
+     $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeOut(500);
+   });
         //# sourceURL=pen.js
-        
-    </script>
+
+      </script>
    </body>
 </html>
