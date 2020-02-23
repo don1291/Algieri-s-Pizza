@@ -18,7 +18,6 @@
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-      
       <style>
          /*
          Landing Zero theme - A free landing page theme from BootstrapZero
@@ -465,59 +464,48 @@
          background: 0 0;
          }
          #timeDiv {
-            font-size: 15px;
-            text-transform: uppercase;
-            position: relative;
-            max-width: 325px;
-            background: #fff;
-            width: 85%;
-            margin: 0 auto;
-            top: 55%;
-            padding: 10px;
-            border-radius: 3px;
-            -webkit-box-shadow: 0 8px 16px -8px #adadad;
-            -moz-box-shadow: 0 8px 16px -8px #adadad;
-            box-shadow: 0 8px 16px -8px #adadad;
-            display: inline-block;
-            vertical-align: top;
-            font-weight: 600;
-        }
-        
-        .open {
-            color: #27ae60;
-            border: 2px solid #27ae60;
-        }
-        
-        .closed {
-            color: rgba(231, 76, 60, 0.85);
-            border: 2px solid rgba(231, 76, 60, 0.8);
-        }
-        
-        .day {
-            display: inline-block;
-            float: left;
-        }
-        
-        .time {
-            display: inline-block;
-            float: right
-        }
-        
-        .today {
-            color: green;
-            font-weight: 600;
-        }
-         
+         font-size: 15px;
+         text-transform: uppercase;
+         position: relative;
+         max-width: 325px;
+         background: #fff;
+         width: 85%;
+         margin: 0 auto;
+         top: 55%;
+         padding: 10px;
+         border-radius: 3px;
+         -webkit-box-shadow: 0 8px 16px -8px #adadad;
+         -moz-box-shadow: 0 8px 16px -8px #adadad;
+         box-shadow: 0 8px 16px -8px #adadad;
+         display: inline-block;
+         vertical-align: top;
+         font-weight: 600;
+         }
+         .open {
+         color: #27ae60;
+         border: 2px solid #27ae60;
+         }
+         .closed {
+         color: rgba(231, 76, 60, 0.85);
+         border: 2px solid rgba(231, 76, 60, 0.8);
+         }
+         .day {
+         display: inline-block;
+         float: left;
+         }
+         .time {
+         display: inline-block;
+         float: right
+         }
+         .today {
+         color: green;
+         font-weight: 600;
+         }
       </style>
       <!-- AngularJS -->
       <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
       <script>
          window.console = window.console || function(t) {};
-      </script>
-      <script>
-         if (document.location.search.match(/type=embed/gi)) {
-             window.parent.postMessage("resize", "*");
-         }
       </script>
    </head>
    <body ng-app="myApp" ng-controller="menuCtrl">
@@ -538,7 +526,7 @@
                      <a class="page-scroll" href="#one">Special</a>
                   </li>
                   <li class="dropdown">
-                     <a class="dropdown-toggle"data-toggle="dropdown">Menu <b class="caret"></b></a>
+                     <a class="dropdown-toggle" data-toggle="dropdown">Menu <b class="caret"></b></a>
                      <ul class="dropdown-menu">
                         <li><a class="page-scroll" href="#app">Appetizer</a></li>
                         <li><a class="page-scroll" href="#salad">Salad</a></li>
@@ -572,7 +560,7 @@
                   <li> 
                      <a class="page-scroll" href="#last">Contact</a>
                   </li>
-            </ul>
+               </ul>
                <ul class="nav navbar-nav navbar-right">
                   <li>
                      <a class="page-scroll" data-toggle="modal" title="A free Bootstrap video landing theme" href="#aboutModal">View Hours</a>
@@ -589,7 +577,7 @@
             <div class="inner">
                <h1 class="cursive">Algieri's Pizza Restaurant</h1>
                <h4>502 Union Ave Belleville, NJ</h4>
-               <h3> Call to order: (973) 751-3577 </h3>
+               <h3> Call to order: (973) 751-5577 </h3>
                <hr>
                <a href="#two" data-toggle="collapse" class="page-scroll btn btn-primary btn-xl">View Menu</a> &nbsp; <a href="https://slicelife.com/restaurants/nj/belleville/07109/algieri-s-pizza/menu" class="btn btn-primary btn-xl page-scroll">Order Online</a>
             </div>
@@ -633,8 +621,8 @@
                         {{appetizer.Name}}
                         <p>{{appetizer.Description}}</p>
                      </td>
-                     <td style="cursor:pointer"onclick="location.href='#'">{{appetizer.Price}}</td>
-                             <td>{{appetizer.Large}}</td>
+                     <td style="cursor:pointer" onclick="location.href='#'">{{appetizer.Price}}</td>
+                     <td>{{appetizer.Large}}</td>
                   </tr>
                </tbody>
             </table>
@@ -704,10 +692,9 @@
                </thead>
                <tbody>
                   <tr ng-repeat="speciality in specialities">
-                     <td a href="h">
+                     <td>
                         {{speciality.Name}}
                         <p>{{speciality.Description}}</p>
-                        </a>
                      </td>
                      <td>{{speciality.Price}}</td>
                   </tr>
@@ -889,12 +876,11 @@
                   </tr>
                </tbody>
             </table>
-            <!--<table class="table table-borderless table-hover">
+            <!--<table class="table table-borderless table-hover" id="dessert">
                <thead class="thead-dark">
                   <tr>
                      <th>Dessert</th>
                      <th>Price</th>
-                     <th>Large</th>
                   </tr>
                </thead>
                <tbody>
@@ -904,7 +890,6 @@
                         <p>{{dessert.Description}}</p>
                      </td>
                      <td>{{dessert.Price}}</td>
-                     <td>{{dessert.Large}}</td>
                   </tr>
                </tbody>
             </table>-->
@@ -1007,10 +992,10 @@
       </section>
       <section class="container-fluid" id="four">
          <div class="row">
-            <div class="col-xs-10 col-xs-offset-1 col-sm-6 col-sm-offset-3 col-md-4 col-md-offset-4">
-               <h2 class="text-center text-primary">Catering</h2>
-               <hr>
-               <table class="table table-borderless table-hover" id="pollos">
+         <div class="col-xs-10 col-xs-offset-1 col-sm-6 col-sm-offset-3 col-md-4 col-md-offset-4">
+            <h2 class="text-center text-primary">Catering</h2>
+            <hr>
+            <table class="table table-borderless table-hover" id="pollos">
                <thead class="thead-dark">
                   <tr>
                      <th>Pollo</th>
@@ -1029,7 +1014,7 @@
                   </tr>
                </tbody>
             </table>
-         <table class="table table-borderless table-hover" id="bake">
+            <table class="table table-borderless table-hover" id="bake">
                <thead class="thead-dark">
                   <tr>
                      <th>Pasta Baked</th>
@@ -1106,7 +1091,8 @@
                   <h2 class="margin-top-0 wow fadeIn">Get in Touch</h2>
                   <hr class="primary">
                   <p>We love feedback. Fill out the form below and we'll get back to you as soon as possible.
-                        <br> Call Us at: <a href="tel:(973) 751-3577">(973) 751-3577</a></p>
+                     <br> Call Us at: <a href="tel:(973) 751-3577">(973) 751-3577</a>
+                  </p>
                </div>
                <div class="col-lg-10 col-lg-offset-1 text-center">
                   <form method="post" name="contact_form" action="mail.php">
@@ -1128,7 +1114,7 @@
                      </div>
                      <div class="col-md-4 col-md-offset-4">
                         <label></label>
-                        <button type="button" data-toggle="modal" data-target="#alertModal"class="btn btn-primary btn-block btn-lg">Send <i class="ion-android-arrow-forward"></i></button>
+                        <button type="button" data-toggle="modal" data-target="#alertModal" class="btn btn-primary btn-block btn-lg">Send <i class="ion-android-arrow-forward"></i></button>
                      </div>
                   </form>
                </div>
@@ -1193,51 +1179,51 @@
          </div>
       </div>
       <div id="aboutModal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-dialog">
+         <div class="modal-dialog">
             <div class="modal-content">
-                <div class="modal-body">
-                    <h2>We're Open At These Times</h2>
-                    <div id="Monday" class="dateTime">
-                        <div class="day">Monday</div>
-                        <div class="time">11am - 11pm</div>
-                    </div>
-                    <br>
-                    <div id="Tuesday" class="dateTime">
-                        <div class="day">Tuesday</div>
-                        <div class="time">11am - 11pm</div>
-                    </div>
-                    <br>
-                    <div id="Wednesday" class="dateTime">
-                        <div class="day">Wednesday</div>
-                        <div class="time">11am - 11pm</div>
-                    </div>
-                    <br>
-                    <div id="Thursday" class="dateTime">
-                        <div class="day">Thursday</div>
-                        <div class="time">11am - 11pm</div>
-                    </div>
-                    <br>
-                    <div id="Friday" class="dateTime">
-                        <div class="day">Friday</div>
-                        <div class="time">11am - 12am</div>
-                    </div>
-                    <br>
-                    <div id="Saturday" class="dateTime">
-                        <div class="day">Saturday</div>
-                        <div class="time">11am - 12am</div>
-                    </div>
-                    <br>
-                    <div id="Sunday" class="dateTime">
-                        <div class="day">Sunday</div>
-                        <div class="time">12pm - 10pm</div>
-                    </div>
-                    <p></p>
-                    <br />
-                    <button class="btn btn-primary btn-lg center-block" data-dismiss="modal" aria-hidden="true"> OK </button>
-                </div>
+               <div class="modal-body">
+                  <h2>We're Open At These Times</h2>
+                  <div id="Monday" class="dateTime">
+                     <div class="day">Monday</div>
+                     <div class="time">11am - 11pm</div>
+                  </div>
+                  <br>
+                  <div id="Tuesday" class="dateTime">
+                     <div class="day">Tuesday</div>
+                     <div class="time">11am - 11pm</div>
+                  </div>
+                  <br>
+                  <div id="Wednesday" class="dateTime">
+                     <div class="day">Wednesday</div>
+                     <div class="time">11am - 11pm</div>
+                  </div>
+                  <br>
+                  <div id="Thursday" class="dateTime">
+                     <div class="day">Thursday</div>
+                     <div class="time">11am - 11pm</div>
+                  </div>
+                  <br>
+                  <div id="Friday" class="dateTime">
+                     <div class="day">Friday</div>
+                     <div class="time">11am - 12am</div>
+                  </div>
+                  <br>
+                  <div id="Saturday" class="dateTime">
+                     <div class="day">Saturday</div>
+                     <div class="time">11am - 12am</div>
+                  </div>
+                  <br>
+                  <div id="Sunday" class="dateTime">
+                     <div class="day">Sunday</div>
+                     <div class="time">12pm - 10pm</div>
+                  </div>
+                  <p></p>
+                  <br />
+                  <button class="btn btn-primary btn-lg center-block" data-dismiss="modal" aria-hidden="true"> OK </button>
+               </div>
             </div>
-        </div>
-     </div>
+         </div>
+      </div>
       <div id="alertModal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
          <div class="modal-dialog modal-sm">
             <div class="modal-content">
@@ -1322,76 +1308,77 @@
                      $scope.pollos = response.data.pollo;
                      $scope.seas = response.data.sea;
                      $scope.pastabakes = response.data.pastabake;
+                     $scope.desserts = response.data.dessert;
                  });
          });
       </script>
       <script>
-        var now = new Date();
-        var weekday = new Array(7);
-        weekday[0] = "Sunday";
-        weekday[1] = "Monday";
-        weekday[2] = "Tuesday";
-        weekday[3] = "Wednesday";
-        weekday[4] = "Thursday";
-        weekday[5] = "Friday";
-        weekday[6] = "Saturday";
-
-        var checkTime = function() {
-            var today = weekday[now.getDay()];
-            var timeDiv = document.getElementById('timeDiv');
-            var dayOfWeek = now.getDay();
-            var hour = now.getHours();
-            var minutes = now.getMinutes();
-            var seconds = now.getSeconds();
-
-            //add AM or PM
-            var suffix = hour >= 12 ? "PM" : "AM";
-
-            // add 0 to one digit minutes
-            if (minutes < 10) {
-                minutes = "0" + minutes;
-            };
-
-            if ((dayOfWeek == 5 || dayOfWeek == 6) && hour >= 11 && hour <= 24) {
-                hour = (hour + 11) % 12 + 1; //i.e. show 1:15 instead of 13:15
-                timeDiv.innerHTML = 'it\'s ' + today + ' ' + hour + ':' + minutes + suffix + ' - we\'re open!';
-                timeDiv.className = 'open';
-            } else
-
-            if ((dayOfWeek == 1 || dayOfWeek == 2 || dayOfWeek == 3 || dayOfWeek == 4) && hour >= 11 && hour <= 23) {
-                hour = (hour + 11) % 12 + 1;
-                timeDiv.innerHTML = 'it\'s ' + today + ' ' + hour + ':' + minutes + suffix + ' - we\'re open!';
-                timeDiv.className = 'open';
-            } else
-
-            if ((dayOfWeek == 0) && hour >= 11 && hour <= 22) {
-                hour = (hour + 11) % 12 + 1;
-                timeDiv.innerHTML = 'it\'s ' + today + ' ' + hour + ':' + minutes + suffix + ' - we\'re open!';
-                timeDiv.className = 'open';
-            } else
-
-            {
-                if (hour == 0 || hour < 12) {
-                    hour = (hour + 11) % 12 + 1; //i.e. show 1:15 instead of 13:15
-                }
-                timeDiv.innerHTML = 'It\'s ' + today + ' ' + hour + ':' + minutes + suffix + ' - we\'re closed!';
-                timeDiv.className = 'closed';
-            }
-        };
-
-        var currentDay = weekday[now.getDay()];
-        var currentDayID = "#" + currentDay; //gets todays weekday and turns it into id
-        $(currentDayID).toggleClass("today"); //hightlights today in the view hours modal popup
-
-        setInterval(checkTime, 1000);
-        checkTime();
-        $('ul.nav li.dropdown').hover(function() {
-     $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeIn(500);
-   }, function() {
-     $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeOut(500);
-   });
-        //# sourceURL=pen.js
-
+         var now = new Date();
+         var weekday = new Array(7);
+         weekday[0] = "Sunday";
+         weekday[1] = "Monday";
+         weekday[2] = "Tuesday";
+         weekday[3] = "Wednesday";
+         weekday[4] = "Thursday";
+         weekday[5] = "Friday";
+         weekday[6] = "Saturday";
+         
+         var checkTime = function() {
+             var today = weekday[now.getDay()];
+             var timeDiv = document.getElementById('timeDiv');
+             var dayOfWeek = now.getDay();
+             var hour = now.getHours();
+             var minutes = now.getMinutes();
+             var seconds = now.getSeconds();
+         
+             //add AM or PM
+             var suffix = hour >= 12 ? "PM" : "AM";
+         
+             // add 0 to one digit minutes
+             if (minutes < 10) {
+                 minutes = "0" + minutes;
+             };
+         
+             if ((dayOfWeek == 5 || dayOfWeek == 6) && hour >= 11 && hour <= 24) {
+                 hour = (hour + 11) % 12 + 1; //i.e. show 1:15 instead of 13:15
+                 timeDiv.innerHTML = 'it\'s ' + today + ' ' + hour + ':' + minutes + suffix + ' - we\'re open!';
+                 timeDiv.className = 'open';
+             } else
+         
+             if ((dayOfWeek == 1 || dayOfWeek == 2 || dayOfWeek == 3 || dayOfWeek == 4) && hour >= 11 && hour <= 23) {
+                 hour = (hour + 11) % 12 + 1;
+                 timeDiv.innerHTML = 'it\'s ' + today + ' ' + hour + ':' + minutes + suffix + ' - we\'re open!';
+                 timeDiv.className = 'open';
+             } else
+         
+             if ((dayOfWeek == 0) && hour >= 11 && hour <= 22) {
+                 hour = (hour + 11) % 12 + 1;
+                 timeDiv.innerHTML = 'it\'s ' + today + ' ' + hour + ':' + minutes + suffix + ' - we\'re open!';
+                 timeDiv.className = 'open';
+             } else
+         
+             {
+                 if (hour == 0 || hour < 12) {
+                     hour = (hour + 11) % 12 + 1; //i.e. show 1:15 instead of 13:15
+                 }
+                 timeDiv.innerHTML = 'It\'s ' + today + ' ' + hour + ':' + minutes + suffix + ' - we\'re closed!';
+                 timeDiv.className = 'closed';
+             }
+         };
+         
+         var currentDay = weekday[now.getDay()];
+         var currentDayID = "#" + currentDay; //gets todays weekday and turns it into id
+         $(currentDayID).toggleClass("today"); //hightlights today in the view hours modal popup
+         
+         setInterval(checkTime, 1000);
+         checkTime();
+         $('ul.nav li.dropdown').hover(function() {
+         $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeIn(500);
+         }, function() {
+         $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeOut(500);
+         });
+         //# sourceURL=pen.js
+         
       </script>
    </body>
 </html>
