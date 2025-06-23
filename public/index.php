@@ -1,5 +1,5 @@
 <?php
-include 'C:\Users\nihar\Documents\database.php'
+include 'C:\Users\nihar\Documents\src\database.php'
 ?>
 
 
@@ -558,7 +558,7 @@ include 'C:\Users\nihar\Documents\database.php'
     </script>
 </head>
 
-<body ng-app="myApp" ng-controller="menuCtrl">
+<body>
     <nav id="topNav" class="navbar navbar-default navbar-fixed-top">
         <div class="container-fluid">
             <div class="navbar-header">
